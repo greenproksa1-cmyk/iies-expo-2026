@@ -1754,79 +1754,352 @@ body.lang-en .modal-close-btn {
   }
 }
 
+/* ============================================
+   TABLET & MOBILE (≤ 768px)
+   ============================================ */
 @media (max-width: 768px) {
+
+  /* --- Header --- */
   .nav-menu {
-    display: none; /* Mobile navigation uses menu overlay */
+    display: none;
   }
   .mobile-menu-btn {
     display: flex;
   }
+  .header-container {
+    padding: 0 20px;
+  }
+  .header-logo-img {
+    height: 38px;
+    max-width: 160px;
+  }
+  .main-header {
+    padding: 16px 0;
+  }
+
+  /* --- Section spacing --- */
+  .section-padding {
+    padding: 70px 0;
+  }
+  .container {
+    padding: 0 18px;
+  }
+
+  /* --- Section titles --- */
+  .section-title {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+  .section-tag {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+  }
+
+  /* --- Hero --- */
+  .hero-section {
+    min-height: 100svh;
+    align-items: flex-end;
+    padding-bottom: 80px;
+  }
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
   .hero-title {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
+    line-height: 1.3;
   }
   body.lang-ar .hero-title {
-    font-size: 3.2rem;
+    font-size: 2.4rem;
   }
+  .hero-title-sub {
+    font-size: 0.5em;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 28px;
+  }
+  .vision-badge {
+    font-size: 0.7rem;
+    padding: 5px 12px;
+  }
+
+  /* Hero stats: horizontal, centered */
   .hero-stats {
-    gap: 24px;
+    gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  .stat-item {
+    align-items: center;
+    min-width: 80px;
   }
   .stat-number {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
+  .stat-plus {
+    font-size: 1.6rem;
+  }
+  .stat-label {
+    font-size: 0.75rem;
+    text-align: center;
+  }
+
+  /* Hero CTAs: full-width stacked */
   .hero-ctas {
     flex-direction: column;
     gap: 12px;
+    align-items: center;
   }
-  .section-title {
-    font-size: 2rem;
+  .hero-ctas .btn {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
   }
+
+  /* --- About section --- */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .about-description {
+    font-size: 1rem;
+    margin-bottom: 24px;
+  }
+  .vision-seal-wrapper {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    gap: 16px;
+  }
+  .stats-row {
+    gap: 12px;
+  }
+  .card-inner {
+    padding: 24px;
+  }
+
+  /* --- Vision & Mission --- */
   .vision-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
+
+  /* --- Objectives --- */
   .objectives-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .objective-card {
+    padding: 22px 14px;
+  }
+
+  /* --- Sectors --- */
+  .sectors-scroll-container {
+    padding: 16px 16px 30px;
+  }
+  .sector-card {
+    width: 220px;
+    padding: 22px;
+  }
+  .sectors-slider-controls {
+    margin-top: 24px;
+    margin-bottom: 14px;
+  }
+
+  /* --- Themes --- */
+  .themes-checklist-wrapper {
+    padding: 24px 20px;
   }
   .themes-checklist {
     grid-template-columns: 1fr;
     gap: 16px;
   }
+  .checklist-text {
+    font-size: 0.95rem;
+  }
+
+  /* --- Audience (Visitors) --- */
   .audience-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
   }
+  .audience-item {
+    padding: 16px;
+    gap: 10px;
+  }
+  .audience-icon {
+    font-size: 1.5rem;
+  }
+  .audience-label {
+    font-size: 0.85rem;
+  }
+
+  /* --- Exhibitor cards --- */
   .exhibitor-cards-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
+  .exh-title {
+    font-size: 1.1rem;
+  }
+
+  /* --- Benefits --- */
   .benefits-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
-  .footer-grid {
-    grid-template-columns: 1fr;
+  .benefit-inner {
+    padding: 24px;
+  }
+
+  /* --- CTA Banner --- */
+  .cta-banner-section {
+    padding: 70px 0;
+  }
+  .cta-banner-title {
+    font-size: 1.8rem;
+  }
+  .cta-banner-desc {
+    font-size: 1rem;
   }
   .cta-banner-buttons {
     flex-direction: column;
     gap: 12px;
+    align-items: center;
   }
+  .cta-banner-buttons .btn {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+
+  /* --- Footer --- */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .main-footer {
+    padding: 60px 0 24px;
+  }
+  .footer-logo-img {
+    height: 46px;
+  }
+  .social-icons {
+    justify-content: flex-start;
+  }
+
+  /* --- Registration Modal --- */
   .form-row {
     grid-template-columns: 1fr;
     gap: 10px;
   }
+  .modal-card {
+    margin: 12px;
+  }
+  .modal-title {
+    font-size: 1.4rem;
+  }
+
+  /* --- Helpers --- */
   .text-center-mobile {
     text-align: center;
   }
+  .btn-large {
+    padding: 14px 28px;
+    font-size: 1rem;
+  }
 }
 
+/* ============================================
+   SMALL PHONES (≤ 480px)
+   ============================================ */
 @media (max-width: 480px) {
   html {
     font-size: 14px;
   }
+
+  /* Header */
+  .header-container {
+    padding: 0 16px;
+  }
+  .header-logo-img {
+    height: 34px;
+    max-width: 140px;
+  }
+
+  /* Hero */
+  .hero-title {
+    font-size: 1.9rem;
+  }
+  body.lang-ar .hero-title {
+    font-size: 2rem;
+  }
+  .hero-stats {
+    gap: 16px;
+  }
+  .stat-number {
+    font-size: 1.6rem;
+  }
+
+  /* Grids */
   .objectives-grid {
     grid-template-columns: 1fr;
   }
   .audience-grid {
     grid-template-columns: 1fr;
   }
-  .header-container {
-    padding: 0 20px;
+
+  /* Sectors */
+  .sector-card {
+    width: 200px;
+  }
+
+  /* Section titles */
+  .section-title {
+    font-size: 1.55rem;
+  }
+  .card-inner {
+    padding: 20px;
+  }
+  .benefit-inner {
+    padding: 20px;
+  }
+  .themes-checklist-wrapper {
+    padding: 20px 16px;
+  }
+
+  /* CTA Banner */
+  .cta-banner-title {
+    font-size: 1.5rem;
+  }
+
+  /* Footer */
+  .footer-contact-info li {
+    font-size: 0.85rem;
+  }
+  .footer-links a {
+    font-size: 0.85rem;
   }
 }
+
+/* ============================================
+   VERY SMALL PHONES (≤ 360px)
+   ============================================ */
+@media (max-width: 360px) {
+  .hero-title {
+    font-size: 1.7rem;
+  }
+  body.lang-ar .hero-title {
+    font-size: 1.8rem;
+  }
+  .hero-ctas .btn,
+  .cta-banner-buttons .btn {
+    max-width: 100%;
+  }
+  .section-title {
+    font-size: 1.4rem;
+  }
+}
+
