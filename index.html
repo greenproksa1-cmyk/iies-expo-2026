@@ -1,1379 +1,1524 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl" class="ar-mode">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IIES EXPO 2026 | المعرض الدولي للتجهيزات والحلول الصناعية</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Tajawal:wght@300;400;500;700;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css" />
-  </head>
-  <body class="lang-ar">
-    
-    <!-- Canvas Mesh Background -->
-    <canvas id="particle-canvas"></canvas>
 
-    <!-- Glowing Tech Grids and Overlays -->
-    <div class="tech-grid-overlay"></div>
-    <div class="radial-glow"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IIES EXPO 2026 | المعرض الدولي للتجهيزات والحلول الصناعية</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Tajawal:wght@300;400;500;700;900&family=Orbitron:wght@400;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/style.css" />
+</head>
 
-    <!-- PRELOADER -->
-    <div id="preloader">
-      <div class="loader-content">
-        <div class="loader-gear-wrapper">
-          <svg class="loader-gear" viewBox="0 0 100 100">
-            <circle cx="50" cy="50" r="30" stroke="var(--color-gold)" stroke-width="2" fill="none" stroke-dasharray="8 4" />
-            <circle cx="50" cy="50" r="20" stroke="var(--color-cyan)" stroke-width="3" fill="none" />
-            <path d="M50 10 L50 20 M50 80 L50 90 M10 50 L20 50 M80 50 L90 50 M22 22 L29 29 M71 71 L78 78 M22 78 L29 71 M71 22 L78 29" stroke="var(--color-gold)" stroke-width="4" stroke-linecap="round" />
-          </svg>
-        </div>
-        <h1 class="loader-title font-title">
-          <span class="ar-only">IIES EXPO 2026 – المعرض الدولي للتجهيزات والحلول الصناعية</span>
-          <span class="en-only">IIES EXPO 2026 – International Industrial Equipment &amp; Solutions</span>
-        </h1>
-        <div class="loader-bar">
-          <div class="loader-bar-fill"></div>
-        </div>
+<body class="lang-ar">
+
+  <!-- Canvas Mesh Background -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Glowing Tech Grids and Overlays -->
+  <div class="tech-grid-overlay"></div>
+  <div class="radial-glow"></div>
+
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="loader-content">
+      <div class="loader-gear-wrapper">
+        <svg class="loader-gear" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="30" stroke="var(--color-gold)" stroke-width="2" fill="none"
+            stroke-dasharray="8 4" />
+          <circle cx="50" cy="50" r="20" stroke="var(--color-cyan)" stroke-width="3" fill="none" />
+          <path
+            d="M50 10 L50 20 M50 80 L50 90 M10 50 L20 50 M80 50 L90 50 M22 22 L29 29 M71 71 L78 78 M22 78 L29 71 M71 22 L78 29"
+            stroke="var(--color-gold)" stroke-width="4" stroke-linecap="round" />
+        </svg>
+      </div>
+      <h1 class="loader-title font-title">
+        <span class="ar-only">IIES EXPO 2026 – المعرض الدولي للتجهيزات والحلول الصناعية</span>
+        <span class="en-only">IIES EXPO 2026 – International Industrial Equipment &amp; Solutions</span>
+      </h1>
+      <div class="loader-bar">
+        <div class="loader-bar-fill"></div>
       </div>
     </div>
+  </div>
 
-    <!-- HEADER / NAVIGATION -->
-    <header class="main-header">
-      <div class="header-container">
-        <a href="#" class="logo">
-          <img src="/iies-expo-logo.png" alt="IIES EXPO 2026 - International Industrial Equipment &amp; Solutions Exhibition" class="header-logo-img" />
-        </a>
-        
-        <nav class="nav-menu">
-          <a href="#about" class="nav-link">
-            <span class="ar-only">عن المعرض</span>
-            <span class="en-only">About</span>
-          </a>
-          <a href="#vision" class="nav-link">
-            <span class="ar-only">الرؤية</span>
-            <span class="en-only">Vision</span>
-          </a>
-          <a href="#objectives" class="nav-link">
-            <span class="ar-only">الأهداف</span>
-            <span class="en-only">Objectives</span>
-          </a>
-          <a href="#sectors" class="nav-link">
-            <span class="ar-only">القطاعات</span>
-            <span class="en-only">Sectors</span>
-          </a>
-          <a href="#themes" class="nav-link">
-            <span class="ar-only">المحاور</span>
-            <span class="en-only">Themes</span>
-          </a>
-          <a href="#benefits" class="nav-link">
-            <span class="ar-only">المميزات</span>
-            <span class="en-only">Why Exhibit</span>
-          </a>
-        </nav>
+  <!-- HEADER / NAVIGATION -->
+  <header class="main-header">
+    <div class="header-container">
+      <a href="#" class="logo">
+        <img src="/iies-expo-logo.png"
+          alt="IIES EXPO 2026 - International Industrial Equipment &amp; Solutions Exhibition"
+          class="header-logo-img" />
+      </a>
 
-        <div class="header-actions">
-          <button id="lang-toggle" class="btn btn-lang" aria-label="Toggle Language">
-            <span class="ar-only">EN</span>
-            <span class="en-only">العربية</span>
-          </button>
-          <button class="btn btn-gold trigger-modal">
-            <span class="ar-only">سجّل الآن</span>
-            <span class="en-only">Register Now</span>
-          </button>
-          <button class="mobile-menu-btn" aria-label="Toggle Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-      </div>
-    </header>
-
-    <!-- MOBILE MENU OVERLAY -->
-    <div class="mobile-menu-overlay">
-      <div class="mobile-menu-content">
-        <a href="#about" class="mobile-link">
+      <nav class="nav-menu">
+        <a href="#about" class="nav-link">
           <span class="ar-only">عن المعرض</span>
           <span class="en-only">About</span>
         </a>
-        <a href="#vision" class="mobile-link">
+        <a href="#vision" class="nav-link">
           <span class="ar-only">الرؤية</span>
           <span class="en-only">Vision</span>
         </a>
-        <a href="#objectives" class="mobile-link">
+        <a href="#objectives" class="nav-link">
           <span class="ar-only">الأهداف</span>
           <span class="en-only">Objectives</span>
         </a>
-        <a href="#sectors" class="mobile-link">
+        <a href="#sectors" class="nav-link">
           <span class="ar-only">القطاعات</span>
           <span class="en-only">Sectors</span>
         </a>
-        <a href="#themes" class="mobile-link">
+        <a href="#themes" class="nav-link">
           <span class="ar-only">المحاور</span>
           <span class="en-only">Themes</span>
         </a>
-        <a href="#benefits" class="mobile-link">
+        <a href="#benefits" class="nav-link">
           <span class="ar-only">المميزات</span>
           <span class="en-only">Why Exhibit</span>
         </a>
-        <button class="btn btn-gold trigger-modal mobile-cta">
+      </nav>
+
+      <div class="header-actions">
+        <button id="lang-toggle" class="btn btn-lang" aria-label="Toggle Language">
+          <span class="ar-only">EN</span>
+          <span class="en-only">العربية</span>
+        </button>
+        <button class="btn btn-gold trigger-modal">
           <span class="ar-only">سجّل الآن</span>
           <span class="en-only">Register Now</span>
         </button>
+        <button class="mobile-menu-btn" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
+  </header>
 
-    <!-- MAIN CONTENT -->
-    <main>
-      
-      <!-- 1. HERO SECTION -->
-      <section id="hero" class="hero-section">
-        <div class="hero-bg-wrapper">
-          <div class="hero-bg-img" style="background-image: url('/hero-bg.png');"></div>
-          <div class="hero-scanlines"></div>
-        </div>
-        <div class="container hero-container">
-          <div class="hero-content scroll-anim fade-in">
-            <div class="vision-badge">
-              <span class="ar-only">رؤية المملكة 2030</span>
-              <span class="en-only">Saudi Vision 2030</span>
-              <span class="badge-dot"></span>
-            </div>
-            
-            <h1 class="hero-title font-title">
-              <span class="ar-only">
-                <span class="logo-iies">IIES</span> <span class="logo-expo">EXPO</span> <span class="logo-year">2026</span>
-                <span class="hero-title-sub">المعرض الدولي للتجهيزات والحلول الصناعية</span>
+  <!-- MOBILE MENU OVERLAY -->
+  <div class="mobile-menu-overlay">
+    <div class="mobile-menu-content">
+      <a href="#about" class="mobile-link">
+        <span class="ar-only">عن المعرض</span>
+        <span class="en-only">About</span>
+      </a>
+      <a href="#vision" class="mobile-link">
+        <span class="ar-only">الرؤية</span>
+        <span class="en-only">Vision</span>
+      </a>
+      <a href="#objectives" class="mobile-link">
+        <span class="ar-only">الأهداف</span>
+        <span class="en-only">Objectives</span>
+      </a>
+      <a href="#sectors" class="mobile-link">
+        <span class="ar-only">القطاعات</span>
+        <span class="en-only">Sectors</span>
+      </a>
+      <a href="#themes" class="mobile-link">
+        <span class="ar-only">المحاور</span>
+        <span class="en-only">Themes</span>
+      </a>
+      <a href="#benefits" class="mobile-link">
+        <span class="ar-only">المميزات</span>
+        <span class="en-only">Why Exhibit</span>
+      </a>
+      <button class="btn btn-gold trigger-modal mobile-cta">
+        <span class="ar-only">سجّل الآن</span>
+        <span class="en-only">Register Now</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- 1. HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="hero-bg-wrapper">
+        <div class="hero-bg-img" style="background-image: url('/hero-bg.png');"></div>
+        <div class="hero-scanlines"></div>
+      </div>
+      <div class="container hero-container">
+        <div class="hero-content scroll-anim fade-in">
+          <div class="vision-badge">
+            <span class="ar-only">رؤية المملكة 2030</span>
+            <span class="en-only">Saudi Vision 2030</span>
+            <span class="badge-dot"></span>
+          </div>
+
+          <h1 class="hero-title font-title">
+            <span class="ar-only">
+              <span class="logo-iies">IIES</span> <span class="logo-expo">EXPO</span> <span
+                class="logo-year">2026</span>
+              <span class="hero-title-sub">المعرض الدولي للتجهيزات والحلول الصناعية</span>
+            </span>
+            <span class="en-only">
+              <span class="logo-iies">IIES</span> <span class="logo-expo">EXPO</span> <span
+                class="logo-year">2026</span>
+              <span class="hero-title-sub">International Industrial Equipment &amp; Solutions Exhibition</span>
+            </span>
+          </h1>
+
+          <h2 class="hero-subtitle">
+            <span class="ar-only">المنصة الرائدة في المملكة لربط المصنعين والمستثمرين وموردي التقنيات الصناعية</span>
+            <span class="en-only">The Kingdom's Premier Platform for Connecting Manufacturers, Investors, & Industrial
+              Tech Providers</span>
+          </h2>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number font-display" data-target="20">0</span><span
+                class="stat-plus font-display">+</span>
+              <span class="stat-label">
+                <span class="ar-only">قطاع صناعي</span>
+                <span class="en-only">Sectors</span>
               </span>
-              <span class="en-only">
-                <span class="logo-iies">IIES</span> <span class="logo-expo">EXPO</span> <span class="logo-year">2026</span>
-                <span class="hero-title-sub">International Industrial Equipment &amp; Solutions Exhibition</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number font-display" data-target="500">0</span><span
+                class="stat-plus font-display">+</span>
+              <span class="stat-label">
+                <span class="ar-only">عارض محلي ودولي</span>
+                <span class="en-only">Exhibitors</span>
               </span>
-            </h1>
-            
-            <h2 class="hero-subtitle">
-              <span class="ar-only">المنصة الرائدة في المملكة لربط المصنعين والمستثمرين وموردي التقنيات الصناعية</span>
-              <span class="en-only">The Kingdom's Premier Platform for Connecting Manufacturers, Investors, & Industrial Tech Providers</span>
-            </h2>
-
-            <div class="hero-stats">
-              <div class="stat-item">
-                <span class="stat-number font-display" data-target="20">0</span><span class="stat-plus font-display">+</span>
-                <span class="stat-label">
-                  <span class="ar-only">قطاع صناعي</span>
-                  <span class="en-only">Sectors</span>
-                </span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number font-display" data-target="500">0</span><span class="stat-plus font-display">+</span>
-                <span class="stat-label">
-                  <span class="ar-only">عارض محلي ودولي</span>
-                  <span class="en-only">Exhibitors</span>
-                </span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number font-display" data-target="10000">0</span><span class="stat-plus font-display">+</span>
-                <span class="stat-label">
-                  <span class="ar-only">زائر متخصص</span>
-                  <span class="en-only">Visitors</span>
-                </span>
-              </div>
             </div>
-
-            <div class="hero-ctas">
-              <button class="btn btn-gold btn-large trigger-modal">
-                <span class="ar-only">سجّل الآن / تسجيل العارضين</span>
-                <span class="en-only">Register Now / Exhibitor Pass</span>
-              </button>
-              <a href="#about" class="btn btn-outline btn-large">
-                <span class="ar-only">الملف التعريفي / اقرأ المزيد</span>
-                <span class="en-only">Download Profile / Read More</span>
-              </a>
+            <div class="stat-item">
+              <span class="stat-number font-display" data-target="10000">0</span><span
+                class="stat-plus font-display">+</span>
+              <span class="stat-label">
+                <span class="ar-only">زائر متخصص</span>
+                <span class="en-only">Visitors</span>
+              </span>
             </div>
           </div>
-        </div>
-        <div class="hero-scroll-indicator">
-          <div class="mouse-wheel"></div>
-        </div>
-      </section>
 
-      <!-- 2. ABOUT SECTION -->
-      <section id="about" class="about-section section-padding">
-        <div class="container">
-          <div class="about-grid">
-            <div class="about-text scroll-anim slide-up-left">
-              <div class="section-tag">
-                <span class="ar-only">نبذة عن المعرض</span>
-                <span class="en-only">ABOUT THE EXHIBITION</span>
-              </div>
-              <h2 class="section-title">
-                <span class="ar-only">الريادة الصناعية نحو رؤية 2030</span>
-                <span class="en-only">Industrial Leadership Towards Vision 2030</span>
-              </h2>
-              <div class="title-underline"></div>
-              <p class="about-description">
-                <span class="ar-only">يعد معرض التجهيزات الصناعية 2026 الحدث الصناعي الأبرز في المملكة العربية السعودية، حيث يجتمع فيه قادة الصناعة العالميين والمصنعين الوطنيين لتشكيل مستقبل الإنتاج والتصنيع. يهدف المعرض إلى توفير منصة متكاملة لعرض أحدث المعدات والآلات والتقنيات التي تسهم في دفع عجلة التحول الرقمي والأتمتة في المصانع السعودية تماشياً مع أهداف برنامج تطوير الصناعة الوطنية والخدمات اللوجستية (ندلب).</span>
-                <span class="en-only">The Industrial Equipment Exhibition 2026 is Saudi Arabia's flagship industrial trade show, uniting global industry giants and national manufacturers to shape the future of production. The exhibition serves as an integrated platform to showcase cutting-edge machinery, technologies, and systems driving digital transformation and automation in Saudi factories, aligned with the National Industrial Development and Logistics Program (NIDLP) under Vision 2030.</span>
-              </p>
-              
-              <div class="vision-seal-wrapper">
-                <!-- SVG Mockup of Vision 2030 logo -->
-                <svg class="vision-2030-seal" viewBox="0 0 100 100">
-                  <circle cx="50" cy="50" r="45" fill="none" stroke="var(--color-gold)" stroke-width="1.5" stroke-dasharray="5 3"/>
-                  <polygon points="50,15 58,35 78,35 62,48 68,68 50,56 32,68 38,48 22,35 42,35" fill="var(--color-gold)" opacity="0.3" />
-                  <path d="M30 45 Q50 25 70 45" fill="none" stroke="var(--color-cyan)" stroke-width="3" stroke-linecap="round"/>
-                  <path d="M25 55 Q50 75 75 55" fill="none" stroke="var(--color-cyan)" stroke-width="3" stroke-linecap="round"/>
-                  <text x="50" y="52" font-family="Orbitron" font-size="12" font-weight="bold" fill="var(--color-gold)" text-anchor="middle">VISION</text>
-                  <text x="50" y="65" font-family="Orbitron" font-size="12" font-weight="bold" fill="var(--color-gold)" text-anchor="middle">2030</text>
-                  <text x="50" y="80" font-family="Tajawal" font-size="7" fill="var(--color-text-light)" text-anchor="middle" letter-spacing="1">رؤية المملكة</text>
-                </svg>
-                <div class="seal-text">
-                  <h4 class="font-title">
-                    <span class="ar-only">مواكبة لرؤية 2030</span>
-                    <span class="en-only">In Alignment with Vision 2030</span>
-                  </h4>
-                  <p>
-                    <span class="ar-only">دعم أهداف تنويع الاقتصاد الوطني وتعزيز المحتوى المحلي الصناعي.</span>
-                    <span class="en-only">Supporting national economic diversification and enhancing local industrial content.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="about-card-wrapper scroll-anim slide-up-right">
-              <div class="glass-card glow-card-teal stats-glow-card">
-                <div class="card-inner">
-                  <h3 class="stats-card-title font-title">
-                    <span class="ar-only">مركز الابتكار والتطوير</span>
-                    <span class="en-only">Innovation & Growth Hub</span>
-                  </h3>
-                  <div class="stats-row">
-                    <div class="stat-pill">
-                      <span class="pill-number font-display">15k+</span>
-                      <span class="pill-label">
-                        <span class="ar-only">متر مربع مساحة المعرض</span>
-                        <span class="en-only">Sqm Exhibition Area</span>
-                      </span>
-                    </div>
-                    <div class="stat-pill">
-                      <span class="pill-number font-display">25+</span>
-                      <span class="pill-label">
-                        <span class="ar-only">دولة مشاركة</span>
-                        <span class="en-only">Participating Countries</span>
-                      </span>
-                    </div>
-                  </div>
-                  <div class="progress-indicator">
-                    <div class="progress-label">
-                      <span class="ar-only">النسبة المستهدفة للمحتوى المحلي</span>
-                      <span class="en-only">Target Local Content Share</span>
-                      <span class="progress-val font-display">60%</span>
-                    </div>
-                    <div class="progress-bar-track">
-                      <div class="progress-bar-fill-stats" style="width: 60%"></div>
-                    </div>
-                  </div>
-                  <div class="card-footer-note">
-                    <span class="ar-only">* تسريع عجلة توطين الصناعات المتقدمة بالمملكة.</span>
-                    <span class="en-only">* Accelerating the localization of advanced industries in KSA.</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="hero-ctas">
+            <button class="btn btn-gold btn-large trigger-modal">
+              <span class="ar-only">سجّل الآن / تسجيل العارضين</span>
+              <span class="en-only">Register Now / Exhibitor Pass</span>
+            </button>
+            <a href="#about" class="btn btn-outline btn-large">
+              <span class="ar-only">الملف التعريفي / اقرأ المزيد</span>
+              <span class="en-only">Download Profile / Read More</span>
+            </a>
           </div>
         </div>
-      </section>
+      </div>
+      <div class="hero-scroll-indicator">
+        <div class="mouse-wheel"></div>
+      </div>
+    </section>
 
-      <!-- 3. VISION & MISSION SECTION -->
-      <section id="vision" class="vision-section section-padding">
-        <div class="container">
-          <div class="vision-grid">
-            
-            <!-- Vision Card -->
-            <div class="glass-card glow-card-teal scroll-anim slide-up">
-              <div class="card-glow-border"></div>
-              <div class="card-inner text-center">
-                <div class="icon-circle border-gold">
-                  <!-- Eye Icon (Vision) -->
-                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                    <circle cx="12" cy="12" r="3"></circle>
-                  </svg>
-                </div>
-                <h3 class="card-title font-title">
-                  <span class="ar-only">رؤيتنا</span>
-                  <span class="en-only">Our Vision</span>
-                </h3>
-                <p class="card-description">
-                  <span class="ar-only">المنصة الرائدة في المملكة لربط المستثمرين والمصنعين وتعزيز الابتكار وبناء قاعدة صناعية متطورة تضع المملكة في مصاف الدول الصناعية الكبرى.</span>
-                  <span class="en-only">The Kingdom's premier platform for connecting investors and manufacturers, fostering innovation, and building an advanced industrial base that positions KSA among major industrial nations.</span>
-                </p>
-              </div>
-            </div>
-
-            <!-- Mission Card -->
-            <div class="glass-card glow-card-teal scroll-anim slide-up delay-200">
-              <div class="card-glow-border"></div>
-              <div class="card-inner text-center">
-                <div class="icon-circle border-cyan">
-                  <!-- Paperplane/Send Icon (Mission) -->
-                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--color-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="22" y1="2" x2="11" y2="13"></line>
-                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                  </svg>
-                </div>
-                <h3 class="card-title font-title">
-                  <span class="ar-only">رسالتنا</span>
-                  <span class="en-only">Our Mission</span>
-                </h3>
-                <p class="card-description">
-                  <span class="ar-only">تمكين القطاع الصناعي من الوصول إلى أحدث الحلول والتقنيات والمعدات، وبناء شراكات استراتيجية تسهم في تعزيز المحتوى المحلي وتوطين التقنيات الحديثة.</span>
-                  <span class="en-only">Empowering the industrial sector by providing access to the latest solutions, technologies, and machinery, and building strategic partnerships that boost local content and localize modern tech.</span>
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- 4. OBJECTIVES SECTION -->
-      <section id="objectives" class="objectives-section section-padding">
-        <div class="container">
-          <div class="section-header text-center scroll-anim fade-in">
+    <!-- 2. ABOUT SECTION -->
+    <section id="about" class="about-section section-padding">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text scroll-anim slide-up-left">
             <div class="section-tag">
-              <span class="ar-only">أهداف المعرض</span>
-              <span class="en-only">EXHIBITION OBJECTIVES</span>
+              <span class="ar-only">نبذة عن المعرض</span>
+              <span class="en-only">ABOUT THE EXHIBITION</span>
             </div>
             <h2 class="section-title">
-              <span class="ar-only">أهدافنا الاستراتيجية</span>
-              <span class="en-only">Strategic Objectives</span>
+              <span class="ar-only">الريادة الصناعية نحو رؤية 2030</span>
+              <span class="en-only">Industrial Leadership Towards Vision 2030</span>
             </h2>
-            <div class="title-underline center"></div>
+            <div class="title-underline"></div>
+            <p class="about-description">
+              <span class="ar-only">يعد معرض التجهيزات الصناعية 2026 الحدث الصناعي الأبرز في المملكة العربية السعودية،
+                حيث يجتمع فيه قادة الصناعة العالميين والمصنعين الوطنيين لتشكيل مستقبل الإنتاج والتصنيع. يهدف المعرض إلى
+                توفير منصة متكاملة لعرض أحدث المعدات والآلات والتقنيات التي تسهم في دفع عجلة التحول الرقمي والأتمتة في
+                المصانع السعودية تماشياً مع أهداف برنامج تطوير الصناعة الوطنية والخدمات اللوجستية (ندلب).</span>
+              <span class="en-only">The Industrial Equipment Exhibition 2026 is Saudi Arabia's flagship industrial trade
+                show, uniting global industry giants and national manufacturers to shape the future of production. The
+                exhibition serves as an integrated platform to showcase cutting-edge machinery, technologies, and
+                systems driving digital transformation and automation in Saudi factories, aligned with the National
+                Industrial Development and Logistics Program (NIDLP) under Vision 2030.</span>
+            </p>
+
+            <div class="vision-seal-wrapper">
+              <!-- SVG Mockup of Vision 2030 logo -->
+              <svg class="vision-2030-seal" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="var(--color-gold)" stroke-width="1.5"
+                  stroke-dasharray="5 3" />
+                <polygon points="50,15 58,35 78,35 62,48 68,68 50,56 32,68 38,48 22,35 42,35" fill="var(--color-gold)"
+                  opacity="0.3" />
+                <path d="M30 45 Q50 25 70 45" fill="none" stroke="var(--color-cyan)" stroke-width="3"
+                  stroke-linecap="round" />
+                <path d="M25 55 Q50 75 75 55" fill="none" stroke="var(--color-cyan)" stroke-width="3"
+                  stroke-linecap="round" />
+                <text x="50" y="52" font-family="Orbitron" font-size="12" font-weight="bold" fill="var(--color-gold)"
+                  text-anchor="middle">VISION</text>
+                <text x="50" y="65" font-family="Orbitron" font-size="12" font-weight="bold" fill="var(--color-gold)"
+                  text-anchor="middle">2030</text>
+                <text x="50" y="80" font-family="Tajawal" font-size="7" fill="var(--color-text-light)"
+                  text-anchor="middle" letter-spacing="1">رؤية المملكة</text>
+              </svg>
+              <div class="seal-text">
+                <h4 class="font-title">
+                  <span class="ar-only">مواكبة لرؤية 2030</span>
+                  <span class="en-only">In Alignment with Vision 2030</span>
+                </h4>
+                <p>
+                  <span class="ar-only">دعم أهداف تنويع الاقتصاد الوطني وتعزيز المحتوى المحلي الصناعي.</span>
+                  <span class="en-only">Supporting national economic diversification and enhancing local industrial
+                    content.</span>
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div class="objectives-grid">
-            
-            <!-- Obj 1 -->
-            <div class="objective-card scroll-anim slide-up">
-              <div class="obj-icon-wrapper">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          <div class="about-card-wrapper scroll-anim slide-up-right">
+            <div class="glass-card glow-card-teal stats-glow-card">
+              <div class="card-inner">
+                <h3 class="stats-card-title font-title">
+                  <span class="ar-only">مركز الابتكار والتطوير</span>
+                  <span class="en-only">Innovation & Growth Hub</span>
+                </h3>
+                <div class="stats-row">
+                  <div class="stat-pill">
+                    <span class="pill-number font-display">15k+</span>
+                    <span class="pill-label">
+                      <span class="ar-only">متر مربع مساحة المعرض</span>
+                      <span class="en-only">Sqm Exhibition Area</span>
+                    </span>
+                  </div>
+                  <div class="stat-pill">
+                    <span class="pill-number font-display">25+</span>
+                    <span class="pill-label">
+                      <span class="ar-only">دولة مشاركة</span>
+                      <span class="en-only">Participating Countries</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="progress-indicator">
+                  <div class="progress-label">
+                    <span class="ar-only">النسبة المستهدفة للمحتوى المحلي</span>
+                    <span class="en-only">Target Local Content Share</span>
+                    <span class="progress-val font-display">60%</span>
+                  </div>
+                  <div class="progress-bar-track">
+                    <div class="progress-bar-fill-stats" style="width: 60%"></div>
+                  </div>
+                </div>
+                <div class="card-footer-note">
+                  <span class="ar-only">* تسريع عجلة توطين الصناعات المتقدمة بالمملكة.</span>
+                  <span class="en-only">* Accelerating the localization of advanced industries in KSA.</span>
+                </div>
               </div>
-              <h4 class="obj-title">
-                <span class="ar-only">دعم التنمية الصناعية</span>
-                <span class="en-only">Support Industrial Dev.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. VISION & MISSION SECTION -->
+    <section id="vision" class="vision-section section-padding">
+      <div class="container">
+        <div class="vision-grid">
+
+          <!-- Vision Card -->
+          <div class="glass-card glow-card-teal scroll-anim slide-up">
+            <div class="card-glow-border"></div>
+            <div class="card-inner text-center">
+              <div class="icon-circle border-gold">
+                <!-- Eye Icon (Vision) -->
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </div>
+              <h3 class="card-title font-title">
+                <span class="ar-only">رؤيتنا</span>
+                <span class="en-only">Our Vision</span>
+              </h3>
+              <p class="card-description">
+                <span class="ar-only">المنصة الرائدة في المملكة لربط المستثمرين والمصنعين وتعزيز الابتكار وبناء قاعدة
+                  صناعية متطورة تضع المملكة في مصاف الدول الصناعية الكبرى.</span>
+                <span class="en-only">The Kingdom's premier platform for connecting investors and manufacturers,
+                  fostering innovation, and building an advanced industrial base that positions KSA among major
+                  industrial nations.</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Mission Card -->
+          <div class="glass-card glow-card-teal scroll-anim slide-up delay-200">
+            <div class="card-glow-border"></div>
+            <div class="card-inner text-center">
+              <div class="icon-circle border-cyan">
+                <!-- Paperplane/Send Icon (Mission) -->
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--color-cyan)" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </div>
+              <h3 class="card-title font-title">
+                <span class="ar-only">رسالتنا</span>
+                <span class="en-only">Our Mission</span>
+              </h3>
+              <p class="card-description">
+                <span class="ar-only">تمكين القطاع الصناعي من الوصول إلى أحدث الحلول والتقنيات والمعدات، وبناء شراكات
+                  استراتيجية تسهم في تعزيز المحتوى المحلي وتوطين التقنيات الحديثة.</span>
+                <span class="en-only">Empowering the industrial sector by providing access to the latest solutions,
+                  technologies, and machinery, and building strategic partnerships that boost local content and localize
+                  modern tech.</span>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. OBJECTIVES SECTION -->
+    <section id="objectives" class="objectives-section section-padding">
+      <div class="container">
+        <div class="section-header text-center scroll-anim fade-in">
+          <div class="section-tag">
+            <span class="ar-only">أهداف المعرض</span>
+            <span class="en-only">EXHIBITION OBJECTIVES</span>
+          </div>
+          <h2 class="section-title">
+            <span class="ar-only">أهدافنا الاستراتيجية</span>
+            <span class="en-only">Strategic Objectives</span>
+          </h2>
+          <div class="title-underline center"></div>
+        </div>
+
+        <div class="objectives-grid">
+
+          <!-- Obj 1 -->
+          <div class="objective-card scroll-anim slide-up">
+            <div class="obj-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <h4 class="obj-title">
+              <span class="ar-only">دعم التنمية الصناعية</span>
+              <span class="en-only">Support Industrial Dev.</span>
+            </h4>
+          </div>
+
+          <!-- Obj 2 -->
+          <div class="objective-card scroll-anim slide-up delay-100">
+            <div class="obj-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                </path>
+                <path d="M2 12h20"></path>
+              </svg>
+            </div>
+            <h4 class="obj-title">
+              <span class="ar-only">استعراض المعدات والآلات</span>
+              <span class="en-only">Showcasing Equipment</span>
+            </h4>
+          </div>
+
+          <!-- Obj 3 -->
+          <div class="objective-card scroll-anim slide-up delay-200">
+            <div class="obj-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h4 class="obj-title">
+              <span class="ar-only">تعزيز الشراكات الاستراتيجية</span>
+              <span class="en-only">Fostering Partnerships</span>
+            </h4>
+          </div>
+
+          <!-- Obj 4 -->
+          <div class="objective-card scroll-anim slide-up delay-300">
+            <div class="obj-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                </path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <h4 class="obj-title">
+              <span class="ar-only">دعم الصناعة الذكية (4IR)</span>
+              <span class="en-only">Supporting Smart Industry</span>
+            </h4>
+          </div>
+
+          <!-- Obj 5 -->
+          <div class="objective-card scroll-anim slide-up delay-400">
+            <div class="obj-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <h4 class="obj-title">
+              <span class="ar-only">استقطاب الاستثمارات الصناعية</span>
+              <span class="en-only">Attracting Investments</span>
+            </h4>
+          </div>
+
+          <!-- Obj 6 -->
+          <div class="objective-card scroll-anim slide-up">
+            <div class="obj-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-cyan)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h4 class="obj-title">
+              <span class="ar-only">تمكين المصانع الوطنية</span>
+              <span class="en-only">Empowering Factories</span>
+            </h4>
+          </div>
+
+          <!-- Obj 7 -->
+          <div class="objective-card scroll-anim slide-up delay-100">
+            <div class="obj-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-cyan)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+            </div>
+            <h4 class="obj-title">
+              <span class="ar-only">تعزيز المحتوى المحلي</span>
+              <span class="en-only">Enhancing Local Content</span>
+            </h4>
+          </div>
+
+          <!-- Obj 8 -->
+          <div class="objective-card scroll-anim slide-up delay-200">
+            <div class="obj-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-cyan)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <h4 class="obj-title">
+              <span class="ar-only">إبراز الفرص الواعدة</span>
+              <span class="en-only">Highlighting Opportunities</span>
+            </h4>
+          </div>
+
+          <!-- Obj 9 -->
+          <div class="objective-card scroll-anim slide-up delay-300">
+            <div class="obj-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-cyan)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path>
+                <line x1="12" y1="2" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <h4 class="obj-title">
+              <span class="ar-only">دعم الابتكار والبحوث</span>
+              <span class="en-only">Supporting Innovation</span>
+            </h4>
+          </div>
+
+          <!-- Obj 10 -->
+          <div class="objective-card scroll-anim slide-up delay-400">
+            <div class="obj-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-cyan)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <line x1="19" y1="8" x2="19" y2="14"></line>
+                <line x1="22" y1="11" x2="16" y2="11"></line>
+              </svg>
+            </div>
+            <h4 class="obj-title">
+              <span class="ar-only">توفير منصة مثالية للصفقات</span>
+              <span class="en-only">Providing Deal Platform</span>
+            </h4>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SECTORS SECTION (Horizontal Scrolling) -->
+    <section id="sectors" class="sectors-section section-padding">
+      <div class="container-fluid">
+        <div class="container text-center-mobile">
+          <div class="section-header scroll-anim fade-in">
+            <div class="section-tag">
+              <span class="ar-only">قطاعات المعرض</span>
+              <span class="en-only">EXHIBITION SECTORS</span>
+            </div>
+            <h2 class="section-title">
+              <span class="ar-only">20 قطاعاً صناعياً ريادياً</span>
+              <span class="en-only">20 Leading Industrial Sectors</span>
+            </h2>
+            <div class="title-underline"></div>
+          </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="sectors-slider-controls container">
+          <span class="scroll-helper-text">
+            <span class="ar-only">اسحب للتصفح ⟷</span>
+            <span class="en-only">Swipe/Scroll to explore ⟷</span>
+          </span>
+          <div class="slider-btns">
+            <button id="slide-prev" class="slider-arrow" aria-label="Previous Section">⟵</button>
+            <button id="slide-next-btn" class="slider-arrow" aria-label="Next Section">⟶</button>
+          </div>
+        </div>
+
+        <!-- Sector Cards Container -->
+        <div class="sectors-scroll-container">
+          <div class="sectors-track" id="sectors-track">
+            <!-- Cards 01-20 will be written inline to avoid missing content -->
+
+            <!-- 01 -->
+            <div class="sector-card">
+              <span class="sector-num font-display">01</span>
+              <div class="sector-icon">⚙️</div>
+              <h4 class="sector-title font-title">
+                <span class="ar-only">الصناعات التحويلية</span>
+                <span class="en-only">Manufacturing Industries</span>
               </h4>
             </div>
 
-            <!-- Obj 2 -->
-            <div class="objective-card scroll-anim slide-up delay-100">
-              <div class="obj-icon-wrapper">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path><path d="M2 12h20"></path></svg>
-              </div>
-              <h4 class="obj-title">
-                <span class="ar-only">استعراض المعدات والآلات</span>
-                <span class="en-only">Showcasing Equipment</span>
+            <!-- 02 -->
+            <div class="sector-card">
+              <span class="sector-num font-display">02</span>
+              <div class="sector-icon">⚡</div>
+              <h4 class="sector-title font-title">
+                <span class="ar-only">أنظمة الطاقة</span>
+                <span class="en-only">Power Systems</span>
               </h4>
             </div>
 
-            <!-- Obj 3 -->
-            <div class="objective-card scroll-anim slide-up delay-200">
-              <div class="obj-icon-wrapper">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-              </div>
-              <h4 class="obj-title">
-                <span class="ar-only">تعزيز الشراكات الاستراتيجية</span>
+            <!-- 03 -->
+            <div class="sector-card">
+              <span class="sector-num font-display">03</span>
+              <div class="sector-icon">🤖</div>
+              <h4 class="sector-title font-title">
+                <span class="ar-only">الروبوتات الصناعية</span>
+                <span class="en-only">Industrial Robotics</span>
+              </h4>
+            </div>
+
+            <!-- 04 -->
+            <div class="sector-card">
+              <span class="sector-num font-display">04</span>
+              <div class="sector-icon">🏭</div>
+              <h4 class="sector-title font-title">
+                <span class="ar-only">المصانع وخطوط الإنتاج</span>
+                <span class="en-only">Factories & Production Lines</span>
+              </h4>
+            </div>
+
+            <!-- 05 -->
+            <div class="sector-card">
+              <span class="sector-num font-display">05</span>
+              <div class="sector-icon">🏗️</div>
+              <h4 class="sector-title font-title">
+                <span class="ar-only">المعدات والآلات</span>
+                <span class="en-only">Equipment & Machinery</span>
+              </h4>
+            </div>
+
+            <!-- 06 -->
+            <div class="sector-card">
+              <span class="sector-num font-display">06</span>
+              <div class="sector-icon">🔩</div>
+              <h4 class="sector-title font-title">
+                <span class="ar-only">معدات التصنيع</span>
+                <span class="en-only">Manufacturing Equipment</span>
+              </h4>
+            </div>
+
+            <!-- 07 -->
+            <div class="sector-card">
+              <span class="sector-num font-display">07</span>
+              <div class="sector-icon">🧪</div>
+              <h4 class="sector-title font-title">
+                <span class="ar-only">البتروكيماويات</span>
+                <span class="en-only">Petrochemicals</span>
+              </h4>
+            </div>
+
+            <!-- 08 -->
+            <div class="sector-card">
+              <span class="sector-num font-display">08</span>
+              <div class="sector-icon">🧠</div>
+              <h4 class="sector-title font-title">
+                <span class="ar-only">الأتمتة والذكاء الاصطناعي</span>
+                <span class="en-only">Automation & AI</span>
+              </h4>
+            </div>
+
+            <!-- 09 -->
+            <div class="sector-card">
+              <span class="sector-num font-display">09</span>
+              <div class="sector-icon">💎</div>
+              <h4 class="sector-title font-title">
+                <span class="ar-only">المواد الصناعية</span>
+                <span class="en-only">Industrial Materials</span>
+              </h4>
+            </div>
+
+            <!-- 10 -->
+            <div class="sector-card">
+              <span class="sector-num font-display">10</span>
+              <div class="sector-icon">🔌</div>
+              <h4 class="sector-title font-title">
+                <span class="ar-only">الطاقة والحلول الكهربائية</span>
+                <span class="en-only">Power & Electrical Solutions</span>
+              </h4>
+            </div>
+
+            <!-- 11 -->
+            <div class="sector-card">
+              <span class="sector-num font-display">11</span>
+              <div class="sector-icon">🚛</div>
+              <h4 class="sector-title font-title">
+                <span class="ar-only">النقل والتخزين</span>
+                <span class="en-only">Transport & Warehousing</span>
+              </h4>
+            </div>
+
+            <!-- 12 -->
+            <div class="sector-card">
+              <span class="sector-num font-display">12</span>
+              <div class="sector-icon">🔗</div>
+              <h4 class="sector-title font-title">
+                <span class="ar-only">سلاسل الإمداد</span>
+                <span class="en-only">Supply Chains</span>
+              </h4>
+            </div>
+
+            <!-- 13 -->
+            <div class="sector-card">
+              <span class="sector-num font-display">13</span>
+              <div class="sector-icon">🌐</div>
+              <h4 class="sector-title font-title">
+                <span class="ar-only">تقنيات المصانع الذكية</span>
+                <span class="en-only">Smart Factory Technologies</span>
+              </h4>
+            </div>
+
+            <!-- 14 -->
+            <div class="sector-card">
+              <span class="sector-num font-display">14</span>
+              <div class="sector-icon">📶</div>
+              <h4 class="sector-title font-title">
+                <span class="ar-only">إنترنت الأشياء</span>
+                <span class="en-only">Internet of Things (IoT)</span>
+              </h4>
+            </div>
+
+            <!-- 15 -->
+            <div class="sector-card">
+              <span class="sector-num font-display">15</span>
+              <div class="sector-icon">♻️</div>
+              <h4 class="sector-title font-title">
+                <span class="ar-only">الاستدامة الصناعية</span>
+                <span class="en-only">Industrial Sustainability</span>
+              </h4>
+            </div>
+
+            <!-- 16 -->
+            <div class="sector-card">
+              <span class="sector-num font-display">16</span>
+              <div class="sector-icon">📦</div>
+              <h4 class="sector-title font-title">
+                <span class="ar-only">معدات التغليف</span>
+                <span class="en-only">Packaging Equipment</span>
+              </h4>
+            </div>
+
+            <!-- 17 -->
+            <div class="sector-card">
+              <span class="sector-num font-display">17</span>
+              <div class="sector-icon">🗑️</div>
+              <h4 class="sector-title font-title">
+                <span class="ar-only">إدارة النفايات</span>
+                <span class="en-only">Waste Management</span>
+              </h4>
+            </div>
+
+            <!-- 18 -->
+            <div class="sector-card">
+              <span class="sector-num font-display">18</span>
+              <div class="sector-icon">🏗️</div>
+              <h4 class="sector-title font-title">
+                <span class="ar-only">الرافعات اللوجستية</span>
+                <span class="en-only">Logistics Cranes</span>
+              </h4>
+            </div>
+
+            <!-- 19 -->
+            <div class="sector-card">
+              <span class="sector-num font-display">19</span>
+              <div class="sector-icon">🚜</div>
+              <h4 class="sector-title font-title">
+                <span class="ar-only">المعدات الثقيلة</span>
+                <span class="en-only">Heavy Equipment</span>
+              </h4>
+            </div>
+
+            <!-- 20 -->
+            <div class="sector-card">
+              <span class="sector-num font-display">20</span>
+              <div class="sector-icon">🏷️</div>
+              <h4 class="sector-title font-title">
+                <span class="ar-only">التعبئة والتغليف</span>
+                <span class="en-only">Packaging & Wrapping</span>
+              </h4>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. EXHIBITION THEMES SECTION -->
+    <section id="themes" class="themes-section section-padding">
+      <div class="container">
+        <div class="section-header text-center scroll-anim fade-in">
+          <div class="section-tag">
+            <span class="ar-only">محاور المعرض</span>
+            <span class="en-only">EXHIBITION THEMES</span>
+          </div>
+          <h2 class="section-title">
+            <span class="ar-only">محاور النقاش والمؤتمر المصاحب</span>
+            <span class="en-only">Discussion Themes & Accompanying Conference</span>
+          </h2>
+          <div class="title-underline center"></div>
+        </div>
+
+        <div class="themes-checklist-wrapper scroll-anim slide-up">
+          <div class="themes-checklist">
+
+            <!-- 1 -->
+            <div class="checklist-item">
+              <span class="checklist-checkbox">✓</span>
+              <span class="checklist-text">
+                <span class="ar-only">مستقبل الصناعة في المملكة</span>
+                <span class="en-only">Future of Industry in the Kingdom</span>
+              </span>
+            </div>
+
+            <!-- 2 -->
+            <div class="checklist-item">
+              <span class="checklist-checkbox">✓</span>
+              <span class="checklist-text">
+                <span class="ar-only">التحول الرقمي في المصانع</span>
+                <span class="en-only">Digital Transformation in Factories</span>
+              </span>
+            </div>
+
+            <!-- 3 -->
+            <div class="checklist-item">
+              <span class="checklist-checkbox">✓</span>
+              <span class="checklist-text">
+                <span class="ar-only">تقنيات الثورة الصناعية الرابعة (4IR)</span>
+                <span class="en-only">Fourth Industrial Revolution Tech (4IR)</span>
+              </span>
+            </div>
+
+            <!-- 4 -->
+            <div class="checklist-item">
+              <span class="checklist-checkbox">✓</span>
+              <span class="checklist-text">
+                <span class="ar-only">توطين الصناعات ونقل المعرفة</span>
+                <span class="en-only">Industry Localization & Knowledge Transfer</span>
+              </span>
+            </div>
+
+            <!-- 5 -->
+            <div class="checklist-item">
+              <span class="checklist-checkbox">✓</span>
+              <span class="checklist-text">
+                <span class="ar-only">المدن الصناعية ومناطق التقنية</span>
+                <span class="en-only">Industrial Cities & Technology Zones</span>
+              </span>
+            </div>
+
+            <!-- 6 -->
+            <div class="checklist-item">
+              <span class="checklist-checkbox">✓</span>
+              <span class="checklist-text">
+                <span class="ar-only">كفاءة الطاقة والإنتاج المستدام</span>
+                <span class="en-only">Energy Efficiency & Sustainable Production</span>
+              </span>
+            </div>
+
+            <!-- 7 -->
+            <div class="checklist-item">
+              <span class="checklist-checkbox">✓</span>
+              <span class="checklist-text">
+                <span class="ar-only">الأتمتة وتطبيقات الروبوتات</span>
+                <span class="en-only">Automation & Robotics Applications</span>
+              </span>
+            </div>
+
+            <!-- 8 -->
+            <div class="checklist-item">
+              <span class="checklist-checkbox">✓</span>
+              <span class="checklist-text">
+                <span class="ar-only">الابتكار والبحث والتطوير في التصنيع</span>
+                <span class="en-only">Innovation, R&D in Manufacturing</span>
+              </span>
+            </div>
+
+            <!-- 9 -->
+            <div class="checklist-item">
+              <span class="checklist-checkbox">✓</span>
+              <span class="checklist-text">
+                <span class="ar-only">الخدمات اللوجستية المتكاملة</span>
+                <span class="en-only">Integrated Logistics Services</span>
+              </span>
+            </div>
+
+            <!-- 10 -->
+            <div class="checklist-item">
+              <span class="checklist-checkbox">✓</span>
+              <span class="checklist-text">
+                <span class="ar-only">فرص الاستثمار والشراكات الدولية</span>
+                <span class="en-only">Investment Opportunities & International Alliances</span>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. TARGET AUDIENCE (VISITORS) SECTION -->
+    <section id="visitors" class="audience-section section-padding">
+      <div class="container">
+        <div class="section-header text-center scroll-anim fade-in">
+          <div class="section-tag">
+            <span class="ar-only">زوار المعرض</span>
+            <span class="en-only">EXHIBITION VISITORS</span>
+          </div>
+          <h2 class="section-title">
+            <span class="ar-only">زوار المعرض</span>
+            <span class="en-only">Exhibition Visitors</span>
+          </h2>
+          <div class="title-underline center"></div>
+        </div>
+
+        <div class="audience-grid">
+
+          <!-- Item 1 -->
+          <div class="audience-item scroll-anim slide-up">
+            <div class="audience-icon">💼</div>
+            <span class="audience-label">
+              <span class="ar-only">أصحاب المصانع</span>
+              <span class="en-only">Factory Owners</span>
+            </span>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="audience-item scroll-anim slide-up delay-100">
+            <div class="audience-icon">👔</div>
+            <span class="audience-label">
+              <span class="ar-only">مدراء المصانع</span>
+              <span class="en-only">Factory Managers</span>
+            </span>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="audience-item scroll-anim slide-up delay-200">
+            <div class="audience-icon">⚙️</div>
+            <span class="audience-label">
+              <span class="ar-only">مدراء الإنتاج وخطوط الإنتاج</span>
+              <span class="en-only">Production & Production Line Managers</span>
+            </span>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="audience-item scroll-anim slide-up delay-300">
+            <div class="audience-icon">🔧</div>
+            <span class="audience-label">
+              <span class="ar-only">مهندسو الصيانة</span>
+              <span class="en-only">Maintenance Engineers</span>
+            </span>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="audience-item scroll-anim slide-up">
+            <div class="audience-icon">🏗️</div>
+            <span class="audience-label">
+              <span class="ar-only">باحثون عن إنشاء مصانع جديدة</span>
+              <span class="en-only">Investors Seeking to Establish New Factories</span>
+            </span>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="audience-item scroll-anim slide-up delay-100">
+            <div class="audience-icon">📐</div>
+            <span class="audience-label">
+              <span class="ar-only">مهندسون صناعيون</span>
+              <span class="en-only">Industrial Engineers</span>
+            </span>
+          </div>
+
+          <!-- Item 7 -->
+          <div class="audience-item scroll-anim slide-up delay-200">
+            <div class="audience-icon">🔩</div>
+            <span class="audience-label">
+              <span class="ar-only">موردو قطع الغيار والصيانة لخطوط الإنتاج</span>
+              <span class="en-only">Spare Parts & Maintenance Suppliers for Production Lines</span>
+            </span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. EXHIBITOR TARGETS SECTION -->
+    <section id="exhibitors" class="exhibitors-section section-padding">
+      <div class="container">
+        <div class="section-header text-center scroll-anim fade-in">
+          <div class="section-tag">
+            <span class="ar-only">الجهات المشاركة</span>
+            <span class="en-only">EXHIBITOR PROFILES</span>
+          </div>
+          <h2 class="section-title">
+            <span class="ar-only">الجهات المستهدفة للمشاركة (العارضون)</span>
+            <span class="en-only">Target Exhibitors</span>
+          </h2>
+          <div class="title-underline center"></div>
+        </div>
+
+        <div class="exhibitor-cards-grid">
+
+          <!-- Card 1 -->
+          <div class="glass-card glow-card-gold scroll-anim slide-up">
+            <div class="card-inner">
+              <div class="exh-badge font-display">01</div>
+              <h3 class="exh-title font-title">
+                <span class="ar-only">المصانع الوطنية الكبرى</span>
+                <span class="en-only">Leading National Factories</span>
+              </h3>
+              <p class="exh-desc">
+                <span class="ar-only">المصانع السعودية الوطنية الساعية لاستعراض قدراتها الإنتاجية وبحث فرص التصدير وجذب
+                  التقنيات الحديثة.</span>
+                <span class="en-only">National Saudi factories showcasing manufacturing capabilities, seeking export
+                  channels, and acquiring tech.</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="glass-card glow-card-gold scroll-anim slide-up delay-100">
+            <div class="card-inner">
+              <div class="exh-badge font-display">02</div>
+              <h3 class="exh-title font-title">
+                <span class="ar-only">شركات المعدات العالمية</span>
+                <span class="en-only">Global Equipment Companies</span>
+              </h3>
+              <p class="exh-desc">
+                <span class="ar-only">المصنعون والموردون الدوليون للمعدات الثقيلة، خطوط الإنتاج، والآلات الصناعية
+                  المتطورة.</span>
+                <span class="en-only">Global original equipment manufacturers (OEMs) and suppliers of machinery, tools,
+                  and processing lines.</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="glass-card glow-card-gold scroll-anim slide-up delay-200">
+            <div class="card-inner">
+              <div class="exh-badge font-display">03</div>
+              <h3 class="exh-title font-title">
+                <span class="ar-only">الشركات اللوجستية</span>
+                <span class="en-only">Logistics Providers</span>
+              </h3>
+              <p class="exh-desc">
+                <span class="ar-only">مقدمو خدمات النقل والتخزين الذكي، وإدارة سلاسل الإمداد، وحلول المناولة اللوجستية
+                  للمصانع.</span>
+                <span class="en-only">Providers of intelligent warehousing, shipping, distribution systems, and material
+                  handling solutions.</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="glass-card glow-card-gold scroll-anim slide-up">
+            <div class="card-inner">
+              <div class="exh-badge font-display">04</div>
+              <h3 class="exh-title font-title">
+                <span class="ar-only">الجامعات ومراكز الأبحاث</span>
+                <span class="en-only">Universities & R&D Hubs</span>
+              </h3>
+              <p class="exh-desc">
+                <span class="ar-only">المؤسسات الأكاديمية والبحثية التي تستعرض براءات الاختراع والنماذج الأولية
+                  للتطبيقات الصناعية المبتكرة.</span>
+                <span class="en-only">Academic bodies and centers showcasing patents, prototypes, and innovations for
+                  industrial applications.</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="glass-card glow-card-gold scroll-anim slide-up delay-100">
+            <div class="card-inner">
+              <div class="exh-badge font-display">05</div>
+              <h3 class="exh-title font-title">
+                <span class="ar-only">شركات التحول الرقمي</span>
+                <span class="en-only">Digital Transformation Firms</span>
+              </h3>
+              <p class="exh-desc">
+                <span class="ar-only">موفرو أنظمة الأتمتة، والذكاء الاصطناعي الصناعي، وحلول الأمن السيبراني للمصانع
+                  والشبكات الصناعية.</span>
+                <span class="en-only">SaaS and technology groups deploying IoT dashboards, AI models, and industrial
+                  cybersecurity shields.</span>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. WHY EXHIBIT (BENEFITS) SECTION -->
+    <section id="benefits" class="benefits-section section-padding">
+      <div class="container">
+        <div class="section-header text-center scroll-anim fade-in">
+          <div class="section-tag">
+            <span class="ar-only">مزايا المشاركة</span>
+            <span class="en-only">WHY EXHIBIT?</span>
+          </div>
+          <h2 class="section-title">
+            <span class="ar-only">فوائد ومزايا المشاركة في المعرض</span>
+            <span class="en-only">Benefits of Exhibiting</span>
+          </h2>
+          <div class="title-underline center"></div>
+        </div>
+
+        <div class="benefits-grid">
+
+          <!-- Benefit 1 -->
+          <div class="benefit-card scroll-anim slide-up">
+            <div class="benefit-inner">
+              <div class="benefit-icon">🏢</div>
+              <h4 class="benefit-title">
+                <span class="ar-only">منصة كبار المصنعين</span>
+                <span class="en-only">Premier Manufacturers Platform</span>
+              </h4>
+              <p class="benefit-desc">
+                <span class="ar-only">التواجد جنباً إلى جنب مع كبرى العلامات الصناعية الرائدة محلياً وإقليمياً.</span>
+                <span class="en-only">Aligning your brand next to leading regional and international industrial
+                  giants.</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Benefit 2 -->
+          <div class="benefit-card scroll-anim slide-up delay-100">
+            <div class="benefit-inner">
+              <div class="benefit-icon">🤝</div>
+              <h4 class="benefit-title">
+                <span class="ar-only">لقاءات B2B مباشرة</span>
+                <span class="en-only">Direct B2B Meetings</span>
+              </h4>
+              <p class="benefit-desc">
+                <span class="ar-only">عقد صفقات وجلسات تواصل مع مستثمرين وشركاء محليين ودوليين مؤهلين.</span>
+                <span class="en-only">Forging major corporate deals through dedicated match-making business
+                  rooms.</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Benefit 3 -->
+          <div class="benefit-card scroll-anim slide-up delay-200">
+            <div class="benefit-inner">
+              <div class="benefit-icon">🎓</div>
+              <h4 class="benefit-title">
+                <span class="ar-only">ورش عمل متخصصة</span>
+                <span class="en-only">Specialized Workshops</span>
+              </h4>
+              <p class="benefit-desc">
+                <span class="ar-only">المشاركة بتقديم أوراق عمل تسلط الضوء على ابتكاراتك وتقنياتك الجديدة.</span>
+                <span class="en-only">Conducting research panels and showing thought leadership on industrial
+                  breakthroughs.</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Benefit 4 -->
+          <div class="benefit-card scroll-anim slide-up">
+            <div class="benefit-inner">
+              <div class="benefit-icon">🚀</div>
+              <h4 class="benefit-title">
+                <span class="ar-only">إطلاق أحدث المنتجات</span>
+                <span class="en-only">Launching Latest Products</span>
+              </h4>
+              <p class="benefit-desc">
+                <span class="ar-only">قناة تسويقية متميزة لإزاحة الستار عن الآلات والحلول الصناعية الجديدة
+                  للأسواق.</span>
+                <span class="en-only">An ideal marketing vehicle to reveal machinery and automated solutions
+                  directly.</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Benefit 5 -->
+          <div class="benefit-card scroll-anim slide-up delay-100">
+            <div class="benefit-inner">
+              <div class="benefit-icon">🔍</div>
+              <h4 class="benefit-title">
+                <span class="ar-only">استعراض الفرص الواعدة</span>
+                <span class="en-only">Showcasing Opportunities</span>
+              </h4>
+              <p class="benefit-desc">
+                <span class="ar-only">فهم اتجاهات السوق السعودي وتقديم الحلول التي تلبي الطلب المتنامي للمصانع.</span>
+                <span class="en-only">Navigating the local ecosystem demands and targeting high-yield
+                  opportunities.</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Benefit 6 -->
+          <div class="benefit-card scroll-anim slide-up delay-200">
+            <div class="benefit-inner">
+              <div class="benefit-icon">🔗</div>
+              <h4 class="benefit-title">
+                <span class="ar-only">تعزيز الشراكات</span>
                 <span class="en-only">Fostering Partnerships</span>
               </h4>
+              <p class="benefit-desc">
+                <span class="ar-only">توطيد علاقاتك مع الموردين الحاليين والعملاء، وبناء قنوات توزيع جديدة.</span>
+                <span class="en-only">Solidifying relations with current supply chains and building distribution
+                  pipelines.</span>
+              </p>
             </div>
+          </div>
 
-            <!-- Obj 4 -->
-            <div class="objective-card scroll-anim slide-up delay-300">
-              <div class="obj-icon-wrapper">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-              </div>
-              <h4 class="obj-title">
-                <span class="ar-only">دعم الصناعة الذكية (4IR)</span>
-                <span class="en-only">Supporting Smart Industry</span>
+          <!-- Benefit 7 -->
+          <div class="benefit-card scroll-anim slide-up">
+            <div class="benefit-inner">
+              <div class="benefit-icon">🎯</div>
+              <h4 class="benefit-title">
+                <span class="ar-only">استقطاب صناع القرار</span>
+                <span class="en-only">Attracting Decision Makers</span>
               </h4>
+              <p class="benefit-desc">
+                <span class="ar-only">التفاعل المباشر مع الرؤساء التنفيذيين ومدراء المشتريات والمهندسين
+                  والمسؤولين.</span>
+                <span class="en-only">Direct face-to-face interaction with executives, developers, and government
+                  actors.</span>
+              </p>
             </div>
+          </div>
 
-            <!-- Obj 5 -->
-            <div class="objective-card scroll-anim slide-up delay-400">
-              <div class="obj-icon-wrapper">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-              </div>
-              <h4 class="obj-title">
-                <span class="ar-only">استقطاب الاستثمارات الصناعية</span>
-                <span class="en-only">Attracting Investments</span>
+          <!-- Benefit 8 -->
+          <div class="benefit-card scroll-anim slide-up delay-100">
+            <div class="benefit-inner">
+              <div class="benefit-icon">📣</div>
+              <h4 class="benefit-title">
+                <span class="ar-only">تغطية إعلامية واسعة</span>
+                <span class="en-only">Wide Media Coverage</span>
               </h4>
+              <p class="benefit-desc">
+                <span class="ar-only">الاستفادة من الحضور الإعلامي المكثف للمنصات الرقمية، التلفاز، والصحافة
+                  المتخصصة.</span>
+                <span class="en-only">Leveraging broad press coverage, interviews, and visual reports on digital
+                  hubs.</span>
+              </p>
             </div>
+          </div>
 
-            <!-- Obj 6 -->
-            <div class="objective-card scroll-anim slide-up">
-              <div class="obj-icon-wrapper">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-              </div>
-              <h4 class="obj-title">
-                <span class="ar-only">تمكين المصانع الوطنية</span>
-                <span class="en-only">Empowering Factories</span>
+          <!-- Benefit 9 (Added to complete the 3x3 grid) -->
+          <div class="benefit-card scroll-anim slide-up delay-200">
+            <div class="benefit-inner">
+              <div class="benefit-icon">📈</div>
+              <h4 class="benefit-title">
+                <span class="ar-only">بناء علاقات تجارية</span>
+                <span class="en-only">Build Business Relations</span>
               </h4>
-            </div>
-
-            <!-- Obj 7 -->
-            <div class="objective-card scroll-anim slide-up delay-100">
-              <div class="obj-icon-wrapper">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-              </div>
-              <h4 class="obj-title">
-                <span class="ar-only">تعزيز المحتوى المحلي</span>
-                <span class="en-only">Enhancing Local Content</span>
-              </h4>
-            </div>
-
-            <!-- Obj 8 -->
-            <div class="objective-card scroll-anim slide-up delay-200">
-              <div class="obj-icon-wrapper">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-              </div>
-              <h4 class="obj-title">
-                <span class="ar-only">إبراز الفرص الواعدة</span>
-                <span class="en-only">Highlighting Opportunities</span>
-              </h4>
-            </div>
-
-            <!-- Obj 9 -->
-            <div class="objective-card scroll-anim slide-up delay-300">
-              <div class="obj-icon-wrapper">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path><line x1="12" y1="2" x2="12" y2="12"></line></svg>
-              </div>
-              <h4 class="obj-title">
-                <span class="ar-only">دعم الابتكار والبحوث</span>
-                <span class="en-only">Supporting Innovation</span>
-              </h4>
-            </div>
-
-            <!-- Obj 10 -->
-            <div class="objective-card scroll-anim slide-up delay-400">
-              <div class="obj-icon-wrapper">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="19" y1="8" x2="19" y2="14"></line><line x1="22" y1="11" x2="16" y2="11"></line></svg>
-              </div>
-              <h4 class="obj-title">
-                <span class="ar-only">توفير منصة مثالية للصفقات</span>
-                <span class="en-only">Providing Deal Platform</span>
-              </h4>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- 5. SECTORS SECTION (Horizontal Scrolling) -->
-      <section id="sectors" class="sectors-section section-padding">
-        <div class="container-fluid">
-          <div class="container text-center-mobile">
-            <div class="section-header scroll-anim fade-in">
-              <div class="section-tag">
-                <span class="ar-only">قطاعات المعرض</span>
-                <span class="en-only">EXHIBITION SECTORS</span>
-              </div>
-              <h2 class="section-title">
-                <span class="ar-only">20 قطاعاً صناعياً ريادياً</span>
-                <span class="en-only">20 Leading Industrial Sectors</span>
-              </h2>
-              <div class="title-underline"></div>
+              <p class="benefit-desc">
+                <span class="ar-only">توسيع محفظة عملائك في أسرع سوق صناعي نمواً في الشرق الأوسط.</span>
+                <span class="en-only">Expanding your client database in the fastest-growing industrial ecosystem.</span>
+              </p>
             </div>
           </div>
 
-          <!-- Slider Controls -->
-          <div class="sectors-slider-controls container">
-            <span class="scroll-helper-text">
-              <span class="ar-only">اسحب للتصفح ⟷</span>
-              <span class="en-only">Swipe/Scroll to explore ⟷</span>
-            </span>
-            <div class="slider-btns">
-              <button id="slide-prev" class="slider-arrow" aria-label="Previous Section">⟵</button>
-              <button id="slide-next-btn" class="slider-arrow" aria-label="Next Section">⟶</button>
-            </div>
-          </div>
-
-          <!-- Sector Cards Container -->
-          <div class="sectors-scroll-container">
-            <div class="sectors-track" id="sectors-track">
-              <!-- Cards 01-20 will be written inline to avoid missing content -->
-              
-              <!-- 01 -->
-              <div class="sector-card">
-                <span class="sector-num font-display">01</span>
-                <div class="sector-icon">⚙️</div>
-                <h4 class="sector-title font-title">
-                  <span class="ar-only">الصناعات التحويلية</span>
-                  <span class="en-only">Manufacturing Industries</span>
-                </h4>
-              </div>
-              
-              <!-- 02 -->
-              <div class="sector-card">
-                <span class="sector-num font-display">02</span>
-                <div class="sector-icon">⚡</div>
-                <h4 class="sector-title font-title">
-                  <span class="ar-only">أنظمة الطاقة</span>
-                  <span class="en-only">Power Systems</span>
-                </h4>
-              </div>
-
-              <!-- 03 -->
-              <div class="sector-card">
-                <span class="sector-num font-display">03</span>
-                <div class="sector-icon">🤖</div>
-                <h4 class="sector-title font-title">
-                  <span class="ar-only">الروبوتات الصناعية</span>
-                  <span class="en-only">Industrial Robotics</span>
-                </h4>
-              </div>
-
-              <!-- 04 -->
-              <div class="sector-card">
-                <span class="sector-num font-display">04</span>
-                <div class="sector-icon">🏭</div>
-                <h4 class="sector-title font-title">
-                  <span class="ar-only">المصانع وخطوط الإنتاج</span>
-                  <span class="en-only">Factories & Production Lines</span>
-                </h4>
-              </div>
-
-              <!-- 05 -->
-              <div class="sector-card">
-                <span class="sector-num font-display">05</span>
-                <div class="sector-icon">🏗️</div>
-                <h4 class="sector-title font-title">
-                  <span class="ar-only">المعدات والآلات</span>
-                  <span class="en-only">Equipment & Machinery</span>
-                </h4>
-              </div>
-
-              <!-- 06 -->
-              <div class="sector-card">
-                <span class="sector-num font-display">06</span>
-                <div class="sector-icon">🔩</div>
-                <h4 class="sector-title font-title">
-                  <span class="ar-only">معدات التصنيع</span>
-                  <span class="en-only">Manufacturing Equipment</span>
-                </h4>
-              </div>
-
-              <!-- 07 -->
-              <div class="sector-card">
-                <span class="sector-num font-display">07</span>
-                <div class="sector-icon">🧪</div>
-                <h4 class="sector-title font-title">
-                  <span class="ar-only">البتروكيماويات</span>
-                  <span class="en-only">Petrochemicals</span>
-                </h4>
-              </div>
-
-              <!-- 08 -->
-              <div class="sector-card">
-                <span class="sector-num font-display">08</span>
-                <div class="sector-icon">🧠</div>
-                <h4 class="sector-title font-title">
-                  <span class="ar-only">الأتمتة والذكاء الاصطناعي</span>
-                  <span class="en-only">Automation & AI</span>
-                </h4>
-              </div>
-
-              <!-- 09 -->
-              <div class="sector-card">
-                <span class="sector-num font-display">09</span>
-                <div class="sector-icon">💎</div>
-                <h4 class="sector-title font-title">
-                  <span class="ar-only">المواد الصناعية</span>
-                  <span class="en-only">Industrial Materials</span>
-                </h4>
-              </div>
-
-              <!-- 10 -->
-              <div class="sector-card">
-                <span class="sector-num font-display">10</span>
-                <div class="sector-icon">🔌</div>
-                <h4 class="sector-title font-title">
-                  <span class="ar-only">الطاقة والحلول الكهربائية</span>
-                  <span class="en-only">Power & Electrical Solutions</span>
-                </h4>
-              </div>
-
-              <!-- 11 -->
-              <div class="sector-card">
-                <span class="sector-num font-display">11</span>
-                <div class="sector-icon">🚛</div>
-                <h4 class="sector-title font-title">
-                  <span class="ar-only">النقل والتخزين</span>
-                  <span class="en-only">Transport & Warehousing</span>
-                </h4>
-              </div>
-
-              <!-- 12 -->
-              <div class="sector-card">
-                <span class="sector-num font-display">12</span>
-                <div class="sector-icon">🔗</div>
-                <h4 class="sector-title font-title">
-                  <span class="ar-only">سلاسل الإمداد</span>
-                  <span class="en-only">Supply Chains</span>
-                </h4>
-              </div>
-
-              <!-- 13 -->
-              <div class="sector-card">
-                <span class="sector-num font-display">13</span>
-                <div class="sector-icon">🌐</div>
-                <h4 class="sector-title font-title">
-                  <span class="ar-only">تقنيات المصانع الذكية</span>
-                  <span class="en-only">Smart Factory Technologies</span>
-                </h4>
-              </div>
-
-              <!-- 14 -->
-              <div class="sector-card">
-                <span class="sector-num font-display">14</span>
-                <div class="sector-icon">📶</div>
-                <h4 class="sector-title font-title">
-                  <span class="ar-only">إنترنت الأشياء</span>
-                  <span class="en-only">Internet of Things (IoT)</span>
-                </h4>
-              </div>
-
-              <!-- 15 -->
-              <div class="sector-card">
-                <span class="sector-num font-display">15</span>
-                <div class="sector-icon">♻️</div>
-                <h4 class="sector-title font-title">
-                  <span class="ar-only">الاستدامة الصناعية</span>
-                  <span class="en-only">Industrial Sustainability</span>
-                </h4>
-              </div>
-
-              <!-- 16 -->
-              <div class="sector-card">
-                <span class="sector-num font-display">16</span>
-                <div class="sector-icon">📦</div>
-                <h4 class="sector-title font-title">
-                  <span class="ar-only">معدات التغليف</span>
-                  <span class="en-only">Packaging Equipment</span>
-                </h4>
-              </div>
-
-              <!-- 17 -->
-              <div class="sector-card">
-                <span class="sector-num font-display">17</span>
-                <div class="sector-icon">🗑️</div>
-                <h4 class="sector-title font-title">
-                  <span class="ar-only">إدارة النفايات</span>
-                  <span class="en-only">Waste Management</span>
-                </h4>
-              </div>
-
-              <!-- 18 -->
-              <div class="sector-card">
-                <span class="sector-num font-display">18</span>
-                <div class="sector-icon">🏗️</div>
-                <h4 class="sector-title font-title">
-                  <span class="ar-only">الرافعات اللوجستية</span>
-                  <span class="en-only">Logistics Cranes</span>
-                </h4>
-              </div>
-
-              <!-- 19 -->
-              <div class="sector-card">
-                <span class="sector-num font-display">19</span>
-                <div class="sector-icon">🚜</div>
-                <h4 class="sector-title font-title">
-                  <span class="ar-only">المعدات الثقيلة</span>
-                  <span class="en-only">Heavy Equipment</span>
-                </h4>
-              </div>
-
-              <!-- 20 -->
-              <div class="sector-card">
-                <span class="sector-num font-display">20</span>
-                <div class="sector-icon">🏷️</div>
-                <h4 class="sector-title font-title">
-                  <span class="ar-only">التعبئة والتغليف</span>
-                  <span class="en-only">Packaging & Wrapping</span>
-                </h4>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 6. EXHIBITION THEMES SECTION -->
-      <section id="themes" class="themes-section section-padding">
-        <div class="container">
-          <div class="section-header text-center scroll-anim fade-in">
-            <div class="section-tag">
-              <span class="ar-only">محاور المعرض</span>
-              <span class="en-only">EXHIBITION THEMES</span>
-            </div>
-            <h2 class="section-title">
-              <span class="ar-only">محاور النقاش والمؤتمر المصاحب</span>
-              <span class="en-only">Discussion Themes & Accompanying Conference</span>
-            </h2>
-            <div class="title-underline center"></div>
-          </div>
-
-          <div class="themes-checklist-wrapper scroll-anim slide-up">
-            <div class="themes-checklist">
-              
-              <!-- 1 -->
-              <div class="checklist-item">
-                <span class="checklist-checkbox">✓</span>
-                <span class="checklist-text">
-                  <span class="ar-only">مستقبل الصناعة في المملكة</span>
-                  <span class="en-only">Future of Industry in the Kingdom</span>
-                </span>
-              </div>
-
-              <!-- 2 -->
-              <div class="checklist-item">
-                <span class="checklist-checkbox">✓</span>
-                <span class="checklist-text">
-                  <span class="ar-only">التحول الرقمي في المصانع</span>
-                  <span class="en-only">Digital Transformation in Factories</span>
-                </span>
-              </div>
-
-              <!-- 3 -->
-              <div class="checklist-item">
-                <span class="checklist-checkbox">✓</span>
-                <span class="checklist-text">
-                  <span class="ar-only">تقنيات الثورة الصناعية الرابعة (4IR)</span>
-                  <span class="en-only">Fourth Industrial Revolution Tech (4IR)</span>
-                </span>
-              </div>
-
-              <!-- 4 -->
-              <div class="checklist-item">
-                <span class="checklist-checkbox">✓</span>
-                <span class="checklist-text">
-                  <span class="ar-only">توطين الصناعات ونقل المعرفة</span>
-                  <span class="en-only">Industry Localization & Knowledge Transfer</span>
-                </span>
-              </div>
-
-              <!-- 5 -->
-              <div class="checklist-item">
-                <span class="checklist-checkbox">✓</span>
-                <span class="checklist-text">
-                  <span class="ar-only">المدن الصناعية ومناطق التقنية</span>
-                  <span class="en-only">Industrial Cities & Technology Zones</span>
-                </span>
-              </div>
-
-              <!-- 6 -->
-              <div class="checklist-item">
-                <span class="checklist-checkbox">✓</span>
-                <span class="checklist-text">
-                  <span class="ar-only">كفاءة الطاقة والإنتاج المستدام</span>
-                  <span class="en-only">Energy Efficiency & Sustainable Production</span>
-                </span>
-              </div>
-
-              <!-- 7 -->
-              <div class="checklist-item">
-                <span class="checklist-checkbox">✓</span>
-                <span class="checklist-text">
-                  <span class="ar-only">الأتمتة وتطبيقات الروبوتات</span>
-                  <span class="en-only">Automation & Robotics Applications</span>
-                </span>
-              </div>
-
-              <!-- 8 -->
-              <div class="checklist-item">
-                <span class="checklist-checkbox">✓</span>
-                <span class="checklist-text">
-                  <span class="ar-only">الابتكار والبحث والتطوير في التصنيع</span>
-                  <span class="en-only">Innovation, R&D in Manufacturing</span>
-                </span>
-              </div>
-
-              <!-- 9 -->
-              <div class="checklist-item">
-                <span class="checklist-checkbox">✓</span>
-                <span class="checklist-text">
-                  <span class="ar-only">الخدمات اللوجستية المتكاملة</span>
-                  <span class="en-only">Integrated Logistics Services</span>
-                </span>
-              </div>
-
-              <!-- 10 -->
-              <div class="checklist-item">
-                <span class="checklist-checkbox">✓</span>
-                <span class="checklist-text">
-                  <span class="ar-only">فرص الاستثمار والشراكات الدولية</span>
-                  <span class="en-only">Investment Opportunities & International Alliances</span>
-                </span>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 7. TARGET AUDIENCE (VISITORS) SECTION -->
-      <section id="visitors" class="audience-section section-padding">
-        <div class="container">
-          <div class="section-header text-center scroll-anim fade-in">
-            <div class="section-tag">
-              <span class="ar-only">زوار المعرض</span>
-              <span class="en-only">EXHIBITION VISITORS</span>
-            </div>
-            <h2 class="section-title">
-              <span class="ar-only">زوار المعرض</span>
-              <span class="en-only">Exhibition Visitors</span>
-            </h2>
-            <div class="title-underline center"></div>
-          </div>
-
-          <div class="audience-grid">
-            
-            <!-- Item 1 -->
-            <div class="audience-item scroll-anim slide-up">
-              <div class="audience-icon">💼</div>
-              <span class="audience-label">
-                <span class="ar-only">أصحاب المصانع</span>
-                <span class="en-only">Factory Owners</span>
-              </span>
-            </div>
-
-            <!-- Item 2 -->
-            <div class="audience-item scroll-anim slide-up delay-100">
-              <div class="audience-icon">👔</div>
-              <span class="audience-label">
-                <span class="ar-only">مدراء المصانع</span>
-                <span class="en-only">Factory Managers</span>
-              </span>
-            </div>
-
-            <!-- Item 3 -->
-            <div class="audience-item scroll-anim slide-up delay-200">
-              <div class="audience-icon">⚙️</div>
-              <span class="audience-label">
-                <span class="ar-only">مدراء الإنتاج وخطوط الإنتاج</span>
-                <span class="en-only">Production & Production Line Managers</span>
-              </span>
-            </div>
-
-            <!-- Item 4 -->
-            <div class="audience-item scroll-anim slide-up delay-300">
-              <div class="audience-icon">🔧</div>
-              <span class="audience-label">
-                <span class="ar-only">مهندسو الصيانة</span>
-                <span class="en-only">Maintenance Engineers</span>
-              </span>
-            </div>
-
-            <!-- Item 5 -->
-            <div class="audience-item scroll-anim slide-up">
-              <div class="audience-icon">🏗️</div>
-              <span class="audience-label">
-                <span class="ar-only">باحثون عن إنشاء مصانع جديدة</span>
-                <span class="en-only">Investors Seeking to Establish New Factories</span>
-              </span>
-            </div>
-
-            <!-- Item 6 -->
-            <div class="audience-item scroll-anim slide-up delay-100">
-              <div class="audience-icon">📐</div>
-              <span class="audience-label">
-                <span class="ar-only">مهندسون صناعيون</span>
-                <span class="en-only">Industrial Engineers</span>
-              </span>
-            </div>
-
-            <!-- Item 7 -->
-            <div class="audience-item scroll-anim slide-up delay-200">
-              <div class="audience-icon">🔩</div>
-              <span class="audience-label">
-                <span class="ar-only">موردو قطع الغيار والصيانة لخطوط الإنتاج</span>
-                <span class="en-only">Spare Parts & Maintenance Suppliers for Production Lines</span>
-              </span>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- 8. EXHIBITOR TARGETS SECTION -->
-      <section id="exhibitors" class="exhibitors-section section-padding">
-        <div class="container">
-          <div class="section-header text-center scroll-anim fade-in">
-            <div class="section-tag">
-              <span class="ar-only">الجهات المشاركة</span>
-              <span class="en-only">EXHIBITOR PROFILES</span>
-            </div>
-            <h2 class="section-title">
-              <span class="ar-only">الجهات المستهدفة للمشاركة (العارضون)</span>
-              <span class="en-only">Target Exhibitors</span>
-            </h2>
-            <div class="title-underline center"></div>
-          </div>
-
-          <div class="exhibitor-cards-grid">
-            
-            <!-- Card 1 -->
-            <div class="glass-card glow-card-gold scroll-anim slide-up">
-              <div class="card-inner">
-                <div class="exh-badge font-display">01</div>
-                <h3 class="exh-title font-title">
-                  <span class="ar-only">المصانع الوطنية الكبرى</span>
-                  <span class="en-only">Leading National Factories</span>
-                </h3>
-                <p class="exh-desc">
-                  <span class="ar-only">المصانع السعودية الوطنية الساعية لاستعراض قدراتها الإنتاجية وبحث فرص التصدير وجذب التقنيات الحديثة.</span>
-                  <span class="en-only">National Saudi factories showcasing manufacturing capabilities, seeking export channels, and acquiring tech.</span>
-                </p>
-              </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="glass-card glow-card-gold scroll-anim slide-up delay-100">
-              <div class="card-inner">
-                <div class="exh-badge font-display">02</div>
-                <h3 class="exh-title font-title">
-                  <span class="ar-only">شركات المعدات العالمية</span>
-                  <span class="en-only">Global Equipment Companies</span>
-                </h3>
-                <p class="exh-desc">
-                  <span class="ar-only">المصنعون والموردون الدوليون للمعدات الثقيلة، خطوط الإنتاج، والآلات الصناعية المتطورة.</span>
-                  <span class="en-only">Global original equipment manufacturers (OEMs) and suppliers of machinery, tools, and processing lines.</span>
-                </p>
-              </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="glass-card glow-card-gold scroll-anim slide-up delay-200">
-              <div class="card-inner">
-                <div class="exh-badge font-display">03</div>
-                <h3 class="exh-title font-title">
-                  <span class="ar-only">الشركات اللوجستية</span>
-                  <span class="en-only">Logistics Providers</span>
-                </h3>
-                <p class="exh-desc">
-                  <span class="ar-only">مقدمو خدمات النقل والتخزين الذكي، وإدارة سلاسل الإمداد، وحلول المناولة اللوجستية للمصانع.</span>
-                  <span class="en-only">Providers of intelligent warehousing, shipping, distribution systems, and material handling solutions.</span>
-                </p>
-              </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="glass-card glow-card-gold scroll-anim slide-up">
-              <div class="card-inner">
-                <div class="exh-badge font-display">04</div>
-                <h3 class="exh-title font-title">
-                  <span class="ar-only">الجامعات ومراكز الأبحاث</span>
-                  <span class="en-only">Universities & R&D Hubs</span>
-                </h3>
-                <p class="exh-desc">
-                  <span class="ar-only">المؤسسات الأكاديمية والبحثية التي تستعرض براءات الاختراع والنماذج الأولية للتطبيقات الصناعية المبتكرة.</span>
-                  <span class="en-only">Academic bodies and centers showcasing patents, prototypes, and innovations for industrial applications.</span>
-                </p>
-              </div>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="glass-card glow-card-gold scroll-anim slide-up delay-100">
-              <div class="card-inner">
-                <div class="exh-badge font-display">05</div>
-                <h3 class="exh-title font-title">
-                  <span class="ar-only">شركات التحول الرقمي</span>
-                  <span class="en-only">Digital Transformation Firms</span>
-                </h3>
-                <p class="exh-desc">
-                  <span class="ar-only">موفرو أنظمة الأتمتة، والذكاء الاصطناعي الصناعي، وحلول الأمن السيبراني للمصانع والشبكات الصناعية.</span>
-                  <span class="en-only">SaaS and technology groups deploying IoT dashboards, AI models, and industrial cybersecurity shields.</span>
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- 9. WHY EXHIBIT (BENEFITS) SECTION -->
-      <section id="benefits" class="benefits-section section-padding">
-        <div class="container">
-          <div class="section-header text-center scroll-anim fade-in">
-            <div class="section-tag">
-              <span class="ar-only">مزايا المشاركة</span>
-              <span class="en-only">WHY EXHIBIT?</span>
-            </div>
-            <h2 class="section-title">
-              <span class="ar-only">فوائد ومزايا المشاركة في المعرض</span>
-              <span class="en-only">Benefits of Exhibiting</span>
-            </h2>
-            <div class="title-underline center"></div>
-          </div>
-
-          <div class="benefits-grid">
-            
-            <!-- Benefit 1 -->
-            <div class="benefit-card scroll-anim slide-up">
-              <div class="benefit-inner">
-                <div class="benefit-icon">🏢</div>
-                <h4 class="benefit-title">
-                  <span class="ar-only">منصة كبار المصنعين</span>
-                  <span class="en-only">Premier Manufacturers Platform</span>
-                </h4>
-                <p class="benefit-desc">
-                  <span class="ar-only">التواجد جنباً إلى جنب مع كبرى العلامات الصناعية الرائدة محلياً وإقليمياً.</span>
-                  <span class="en-only">Aligning your brand next to leading regional and international industrial giants.</span>
-                </p>
-              </div>
-            </div>
-
-            <!-- Benefit 2 -->
-            <div class="benefit-card scroll-anim slide-up delay-100">
-              <div class="benefit-inner">
-                <div class="benefit-icon">🤝</div>
-                <h4 class="benefit-title">
-                  <span class="ar-only">لقاءات B2B مباشرة</span>
-                  <span class="en-only">Direct B2B Meetings</span>
-                </h4>
-                <p class="benefit-desc">
-                  <span class="ar-only">عقد صفقات وجلسات تواصل مع مستثمرين وشركاء محليين ودوليين مؤهلين.</span>
-                  <span class="en-only">Forging major corporate deals through dedicated match-making business rooms.</span>
-                </p>
-              </div>
-            </div>
-
-            <!-- Benefit 3 -->
-            <div class="benefit-card scroll-anim slide-up delay-200">
-              <div class="benefit-inner">
-                <div class="benefit-icon">🎓</div>
-                <h4 class="benefit-title">
-                  <span class="ar-only">ورش عمل متخصصة</span>
-                  <span class="en-only">Specialized Workshops</span>
-                </h4>
-                <p class="benefit-desc">
-                  <span class="ar-only">المشاركة بتقديم أوراق عمل تسلط الضوء على ابتكاراتك وتقنياتك الجديدة.</span>
-                  <span class="en-only">Conducting research panels and showing thought leadership on industrial breakthroughs.</span>
-                </p>
-              </div>
-            </div>
-
-            <!-- Benefit 4 -->
-            <div class="benefit-card scroll-anim slide-up">
-              <div class="benefit-inner">
-                <div class="benefit-icon">🚀</div>
-                <h4 class="benefit-title">
-                  <span class="ar-only">إطلاق أحدث المنتجات</span>
-                  <span class="en-only">Launching Latest Products</span>
-                </h4>
-                <p class="benefit-desc">
-                  <span class="ar-only">قناة تسويقية متميزة لإزاحة الستار عن الآلات والحلول الصناعية الجديدة للأسواق.</span>
-                  <span class="en-only">An ideal marketing vehicle to reveal machinery and automated solutions directly.</span>
-                </p>
-              </div>
-            </div>
-
-            <!-- Benefit 5 -->
-            <div class="benefit-card scroll-anim slide-up delay-100">
-              <div class="benefit-inner">
-                <div class="benefit-icon">🔍</div>
-                <h4 class="benefit-title">
-                  <span class="ar-only">استعراض الفرص الواعدة</span>
-                  <span class="en-only">Showcasing Opportunities</span>
-                </h4>
-                <p class="benefit-desc">
-                  <span class="ar-only">فهم اتجاهات السوق السعودي وتقديم الحلول التي تلبي الطلب المتنامي للمصانع.</span>
-                  <span class="en-only">Navigating the local ecosystem demands and targeting high-yield opportunities.</span>
-                </p>
-              </div>
-            </div>
-
-            <!-- Benefit 6 -->
-            <div class="benefit-card scroll-anim slide-up delay-200">
-              <div class="benefit-inner">
-                <div class="benefit-icon">🔗</div>
-                <h4 class="benefit-title">
-                  <span class="ar-only">تعزيز الشراكات</span>
-                  <span class="en-only">Fostering Partnerships</span>
-                </h4>
-                <p class="benefit-desc">
-                  <span class="ar-only">توطيد علاقاتك مع الموردين الحاليين والعملاء، وبناء قنوات توزيع جديدة.</span>
-                  <span class="en-only">Solidifying relations with current supply chains and building distribution pipelines.</span>
-                </p>
-              </div>
-            </div>
-
-            <!-- Benefit 7 -->
-            <div class="benefit-card scroll-anim slide-up">
-              <div class="benefit-inner">
-                <div class="benefit-icon">🎯</div>
-                <h4 class="benefit-title">
-                  <span class="ar-only">استقطاب صناع القرار</span>
-                  <span class="en-only">Attracting Decision Makers</span>
-                </h4>
-                <p class="benefit-desc">
-                  <span class="ar-only">التفاعل المباشر مع الرؤساء التنفيذيين ومدراء المشتريات والمهندسين والمسؤولين.</span>
-                  <span class="en-only">Direct face-to-face interaction with executives, developers, and government actors.</span>
-                </p>
-              </div>
-            </div>
-
-            <!-- Benefit 8 -->
-            <div class="benefit-card scroll-anim slide-up delay-100">
-              <div class="benefit-inner">
-                <div class="benefit-icon">📣</div>
-                <h4 class="benefit-title">
-                  <span class="ar-only">تغطية إعلامية واسعة</span>
-                  <span class="en-only">Wide Media Coverage</span>
-                </h4>
-                <p class="benefit-desc">
-                  <span class="ar-only">الاستفادة من الحضور الإعلامي المكثف للمنصات الرقمية، التلفاز، والصحافة المتخصصة.</span>
-                  <span class="en-only">Leveraging broad press coverage, interviews, and visual reports on digital hubs.</span>
-                </p>
-              </div>
-            </div>
-
-            <!-- Benefit 9 (Added to complete the 3x3 grid) -->
-            <div class="benefit-card scroll-anim slide-up delay-200">
-              <div class="benefit-inner">
-                <div class="benefit-icon">📈</div>
-                <h4 class="benefit-title">
-                  <span class="ar-only">بناء علاقات تجارية</span>
-                  <span class="en-only">Build Business Relations</span>
-                </h4>
-                <p class="benefit-desc">
-                  <span class="ar-only">توسيع محفظة عملائك في أسرع سوق صناعي نمواً في الشرق الأوسط.</span>
-                  <span class="en-only">Expanding your client database in the fastest-growing industrial ecosystem.</span>
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- 10. CTA SECTION -->
-      <section class="cta-banner-section scroll-anim fade-in">
-        <div class="cta-banner-bg"></div>
-        <div class="container cta-banner-container text-center">
-          <h2 class="cta-banner-title">
-            <span class="ar-only">كن جزءاً من أكبر منصة صناعية في المملكة</span>
-            <span class="en-only">Be Part of Saudi Arabia's #1 Industrial Platform</span>
-          </h2>
-          <p class="cta-banner-desc">
-            <span class="ar-only">انضم إلينا كعارض أو احجز بطاقة زائر الآن لحضور الفعاليات وتسهيل الصفقات الكبرى.</span>
-            <span class="en-only">Join us as an exhibitor or secure your visitor badge to experience top machinery panels.</span>
-          </p>
-          <div class="cta-banner-buttons">
-            <button class="btn btn-gold btn-large trigger-modal" data-type="exhibitor">
-              <span class="ar-only">سجل كعارض</span>
-              <span class="en-only">Register as Exhibitor</span>
-            </button>
-            <button class="btn btn-cyan btn-large trigger-modal" data-type="visitor">
-              <span class="ar-only">سجل كزائر</span>
-              <span class="en-only">Register as Visitor</span>
-            </button>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <!-- 11. FOOTER -->
-    <footer class="main-footer">
-      <div class="container">
-        <div class="footer-grid">
-          
-          <!-- Col 1: About/Logo -->
-          <div class="footer-col about-col">
-            <a href="#" class="footer-logo">
-              <img src="/iies-expo-logo.png" alt="IIES EXPO 2026" class="footer-logo-img" />
-            </a>
-            <p class="footer-desc">
-              <span class="ar-only">المعرض الدولي الأبرز للتجهيزات والآلات الصناعية والحلول الذكية بالمملكة العربية السعودية.</span>
-              <span class="en-only">The premier international exhibition for industrial equipment, machinery, and smart manufacturing in Saudi Arabia.</span>
-            </p>
-            <div class="vision-indicator-footer">
-              <div class="footer-vision-circle">2030</div>
-              <span class="ar-only">مواكباً لمستهدفات رؤية المملكة 2030</span>
-              <span class="en-only">In harmony with Saudi Vision 2030 objectives</span>
-            </div>
-          </div>
-
-          <!-- Col 2: Quick Links -->
-          <div class="footer-col links-col">
-            <h4 class="footer-title-col">
-              <span class="ar-only">روابط سريعة</span>
-              <span class="en-only">Quick Links</span>
-            </h4>
-            <ul class="footer-links">
-              <li><a href="#about"><span class="ar-only">نبذة عن المعرض</span><span class="en-only">About Event</span></a></li>
-              <li><a href="#sectors"><span class="ar-only">القطاعات</span><span class="en-only">Sectors</span></a></li>
-              <li><a href="#themes"><span class="ar-only">المحاور</span><span class="en-only">Themes</span></a></li>
-              <li><a href="#benefits"><span class="ar-only">لماذا تشارك؟</span><span class="en-only">Why Exhibit?</span></a></li>
-            </ul>
-          </div>
-
-          <!-- Col 3: Contact Info -->
-          <div class="footer-col contact-col">
-            <h4 class="footer-title-col">
-              <span class="ar-only">اتصل بنا</span>
-              <span class="en-only">Contact</span>
-            </h4>
-            <ul class="footer-contact-info">
-              <li>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                <a href="mailto:contact@gren-pro.com" class="footer-contact-link">contact@gren-pro.com</a>
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.54 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                <a href="tel:0590401777" class="footer-contact-link">0590401777</a>
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                <span class="ar-only">مركز الرياض الدولي للمؤتمرات والمعارض</span>
-                <span class="en-only">Riyadh International Convention Center</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Col 4: Social media -->
-          <div class="footer-col socials-col">
-            <h4 class="footer-title-col">
-              <span class="ar-only">تابعنا</span>
-              <span class="en-only">Follow Us</span>
-            </h4>
-            <div class="social-icons">
-              <a href="#" class="social-icon-btn" aria-label="LinkedIn" title="LinkedIn">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-              </a>
-              <a href="#" class="social-icon-btn" aria-label="X / Twitter" title="X / Twitter">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
-              </a>
-              <a href="#" class="social-icon-btn" aria-label="Instagram" title="Instagram">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-              </a>
-              <a href="#" class="social-icon-btn" aria-label="YouTube" title="YouTube">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#031c20"/></svg>
-              </a>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="footer-bottom">
-          <p class="copyright">
-            <span class="ar-only">© 2026 IIES EXPO – المعرض الدولي للتجهيزات والحلول الصناعية. جميع الحقوق محفوظة.</span>
-            <span class="en-only">© 2026 IIES EXPO – International Industrial Equipment &amp; Solutions Exhibition. All Rights Reserved.</span>
-          </p>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <!-- REGISTRATION MODAL -->
-    <div id="register-modal" class="modal-overlay">
-      <div class="glass-card modal-card glow-card-teal">
-        <button class="modal-close-btn" aria-label="Close Form">×</button>
-        <div class="card-inner">
-          <h3 class="modal-title font-title text-center">
-            <span class="ar-only">تسجيل الاهتمام بالمعرض</span>
-            <span class="en-only">Register Interest</span>
-          </h3>
-          <p class="modal-subtitle text-center">
-            <span class="ar-only">احجز مقعدك للمشاركة في صياغة المستقبل الصناعي</span>
-            <span class="en-only">Join us to shape the industrial future</span>
-          </p>
-          
-          <form id="registration-form" class="modal-form">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="reg-name">
-                  <span class="ar-only">الاسم الكامل *</span>
-                  <span class="en-only">Full Name *</span>
-                </label>
-                <input type="text" id="reg-name" required placeholder="John Doe / محمد أحمد" />
-              </div>
-              <div class="form-group">
-                <label for="reg-email">
-                  <span class="ar-only">البريد الإلكتروني *</span>
-                  <span class="en-only">Email Address *</span>
-                </label>
-                <input type="email" id="reg-email" required placeholder="name@company.com" />
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="reg-phone">
-                  <span class="ar-only">رقم الجوال *</span>
-                  <span class="en-only">Phone Number *</span>
-                </label>
-                <input type="tel" id="reg-phone" required placeholder="+966 5x xxx xxxx" />
-              </div>
-              <div class="form-group">
-                <label for="reg-company">
-                  <span class="ar-only">الشركة / المنشأة *</span>
-                  <span class="en-only">Company / Entity *</span>
-                </label>
-                <input type="text" id="reg-company" required placeholder="Saudi Industrial Corp" />
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="reg-type">
-                  <span class="ar-only">نوع التسجيل *</span>
-                  <span class="en-only">Registration Type *</span>
-                </label>
-                <select id="reg-type" required>
-                  <option value="" disabled selected>اختر نوع التسجيل / Select type...</option>
-                  <option value="exhibitor">عارض – حجز جناح / Exhibitor – Book a Stand</option>
-                  <option value="visitor">زائر – حضور المعرض / Visitor – General Admission</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="reg-sector">
-                  <span class="ar-only">القطاع الرئيسي *</span>
-                  <span class="en-only">Main Sector *</span>
-                </label>
-                <select id="reg-sector" required>
-                  <option value="" disabled selected>
-                    <span class="ar-only">اختر القطاع...</span>
-                    <span class="en-only">Select your sector...</span>
-                  </option>
-                  <option value="mfg">الصناعات التحويلية / Manufacturing</option>
-                  <option value="auto">الأتمتة والذكاء الاصطناعي / Automation & AI</option>
-                  <option value="energy">الطاقة والكهرباء / Energy & Power</option>
-                  <option value="robo">الروبوتات والمصانع الذكية / Robotics & Smart Factories</option>
-                  <option value="log">الخدمات اللوجستية وسلاسل الإمداد / Logistics</option>
-                  <option value="heavy">المعدات الثقيلة والآلات / Heavy Equipment</option>
-                  <option value="other">أخرى / Other</option>
-                </select>
-              </div>
-            </div>
-
-            <button type="submit" class="btn btn-gold btn-large form-submit-btn">
-              <span class="ar-only">إرسال الطلب</span>
-              <span class="en-only">Submit Application</span>
-            </button>
-
-            <!-- Success Alert inside modal -->
-            <div class="form-success-message" id="form-success">
-              <span class="ar-only">✅ تم إرسال طلبك بنجاح! سنتواصل معك قريباً.</span>
-              <span class="en-only">✅ Application submitted successfully! We will contact you soon.</span>
-            </div>
-          </form>
+    <!-- 10. CTA SECTION -->
+    <section class="cta-banner-section scroll-anim fade-in">
+      <div class="cta-banner-bg"></div>
+      <div class="container cta-banner-container text-center">
+        <h2 class="cta-banner-title">
+          <span class="ar-only">كن جزءاً من أكبر منصة صناعية في المملكة</span>
+          <span class="en-only">Be Part of Saudi Arabia's #1 Industrial Platform</span>
+        </h2>
+        <p class="cta-banner-desc">
+          <span class="ar-only">انضم إلينا كعارض أو احجز بطاقة زائر الآن لحضور الفعاليات وتسهيل الصفقات الكبرى.</span>
+          <span class="en-only">Join us as an exhibitor or secure your visitor badge to experience top machinery
+            panels.</span>
+        </p>
+        <div class="cta-banner-buttons">
+          <button class="btn btn-gold btn-large trigger-modal" data-type="exhibitor">
+            <span class="ar-only">سجل كعارض</span>
+            <span class="en-only">Register as Exhibitor</span>
+          </button>
+          <button class="btn btn-cyan btn-large trigger-modal" data-type="visitor">
+            <span class="ar-only">سجل كزائر</span>
+            <span class="en-only">Register as Visitor</span>
+          </button>
         </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 11. FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Col 1: About/Logo -->
+        <div class="footer-col about-col">
+          <a href="#" class="footer-logo">
+            <img src="/iies-expo-logo.png" alt="IIES EXPO 2026" class="footer-logo-img" />
+          </a>
+          <p class="footer-desc">
+            <span class="ar-only">المعرض الدولي الأبرز للتجهيزات والآلات الصناعية والحلول الذكية بالمملكة العربية
+              السعودية.</span>
+            <span class="en-only">The premier international exhibition for industrial equipment, machinery, and smart
+              manufacturing in Saudi Arabia.</span>
+          </p>
+          <div class="vision-indicator-footer">
+            <div class="footer-vision-circle">2030</div>
+            <span class="ar-only">مواكباً لمستهدفات رؤية المملكة 2030</span>
+            <span class="en-only">In harmony with Saudi Vision 2030 objectives</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col links-col">
+          <h4 class="footer-title-col">
+            <span class="ar-only">روابط سريعة</span>
+            <span class="en-only">Quick Links</span>
+          </h4>
+          <ul class="footer-links">
+            <li><a href="#about"><span class="ar-only">نبذة عن المعرض</span><span class="en-only">About Event</span></a>
+            </li>
+            <li><a href="#sectors"><span class="ar-only">القطاعات</span><span class="en-only">Sectors</span></a></li>
+            <li><a href="#themes"><span class="ar-only">المحاور</span><span class="en-only">Themes</span></a></li>
+            <li><a href="#benefits"><span class="ar-only">لماذا تشارك؟</span><span class="en-only">Why
+                  Exhibit?</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contact Info -->
+        <div class="footer-col contact-col">
+          <h4 class="footer-title-col">
+            <span class="ar-only">اتصل بنا</span>
+            <span class="en-only">Contact</span>
+          </h4>
+          <ul class="footer-contact-info">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <a href="mailto:contact@gren-pro.com" class="footer-contact-link">contact@gren-pro.com</a>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.54 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+              <a href="tel:0590401777" class="footer-contact-link">0590401777</a>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span class="ar-only">المدينة الصناعية الثانية بالرياض</span>
+              <span class="en-only">Riyadh International Convention Center</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Social media -->
+        <div class="footer-col socials-col">
+          <h4 class="footer-title-col">
+            <span class="ar-only">تابعنا</span>
+            <span class="en-only">Follow Us</span>
+          </h4>
+          <div class="social-icons">
+            <a href="#" class="social-icon-btn" aria-label="LinkedIn" title="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="X / Twitter" title="X / Twitter">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z" />
+              </svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram" title="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="YouTube" title="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#031c20" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          <span class="ar-only">© 2026 IIES EXPO – المعرض الدولي للتجهيزات والحلول الصناعية. جميع الحقوق محفوظة.</span>
+          <span class="en-only">© 2026 IIES EXPO – International Industrial Equipment &amp; Solutions Exhibition. All
+            Rights Reserved.</span>
+        </p>
       </div>
     </div>
+  </footer>
 
-    <!-- MAIN JAVASCRIPT -->
-    <script type="module" src="/main.js"></script>
-  </body>
+  <!-- REGISTRATION MODAL -->
+  <div id="register-modal" class="modal-overlay">
+    <div class="glass-card modal-card glow-card-teal">
+      <button class="modal-close-btn" aria-label="Close Form">×</button>
+      <div class="card-inner">
+        <h3 class="modal-title font-title text-center">
+          <span class="ar-only">تسجيل الاهتمام بالمعرض</span>
+          <span class="en-only">Register Interest</span>
+        </h3>
+        <p class="modal-subtitle text-center">
+          <span class="ar-only">احجز مقعدك للمشاركة في صياغة المستقبل الصناعي</span>
+          <span class="en-only">Join us to shape the industrial future</span>
+        </p>
+
+        <form id="registration-form" class="modal-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="reg-name">
+                <span class="ar-only">الاسم الكامل *</span>
+                <span class="en-only">Full Name *</span>
+              </label>
+              <input type="text" id="reg-name" required placeholder="John Doe / محمد أحمد" />
+            </div>
+            <div class="form-group">
+              <label for="reg-email">
+                <span class="ar-only">البريد الإلكتروني *</span>
+                <span class="en-only">Email Address *</span>
+              </label>
+              <input type="email" id="reg-email" required placeholder="name@company.com" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="reg-phone">
+                <span class="ar-only">رقم الجوال *</span>
+                <span class="en-only">Phone Number *</span>
+              </label>
+              <input type="tel" id="reg-phone" required placeholder="+966 5x xxx xxxx" />
+            </div>
+            <div class="form-group">
+              <label for="reg-company">
+                <span class="ar-only">الشركة / المنشأة *</span>
+                <span class="en-only">Company / Entity *</span>
+              </label>
+              <input type="text" id="reg-company" required placeholder="Saudi Industrial Corp" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="reg-type">
+                <span class="ar-only">نوع التسجيل *</span>
+                <span class="en-only">Registration Type *</span>
+              </label>
+              <select id="reg-type" required>
+                <option value="" disabled selected>اختر نوع التسجيل / Select type...</option>
+                <option value="exhibitor">عارض – حجز جناح / Exhibitor – Book a Stand</option>
+                <option value="visitor">زائر – حضور المعرض / Visitor – General Admission</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="reg-sector">
+                <span class="ar-only">القطاع الرئيسي *</span>
+                <span class="en-only">Main Sector *</span>
+              </label>
+              <select id="reg-sector" required>
+                <option value="" disabled selected>
+                  <span class="ar-only">اختر القطاع...</span>
+                  <span class="en-only">Select your sector...</span>
+                </option>
+                <option value="mfg">الصناعات التحويلية / Manufacturing</option>
+                <option value="auto">الأتمتة والذكاء الاصطناعي / Automation & AI</option>
+                <option value="energy">الطاقة والكهرباء / Energy & Power</option>
+                <option value="robo">الروبوتات والمصانع الذكية / Robotics & Smart Factories</option>
+                <option value="log">الخدمات اللوجستية وسلاسل الإمداد / Logistics</option>
+                <option value="heavy">المعدات الثقيلة والآلات / Heavy Equipment</option>
+                <option value="other">أخرى / Other</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-gold btn-large form-submit-btn">
+            <span class="ar-only">إرسال الطلب</span>
+            <span class="en-only">Submit Application</span>
+          </button>
+
+          <!-- Success Alert inside modal -->
+          <div class="form-success-message" id="form-success">
+            <span class="ar-only">✅ تم إرسال طلبك بنجاح! سنتواصل معك قريباً.</span>
+            <span class="en-only">✅ Application submitted successfully! We will contact you soon.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN JAVASCRIPT -->
+  <script type="module" src="/main.js"></script>
+</body>
+
 </html>
