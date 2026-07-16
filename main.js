@@ -92,7 +92,7 @@ if (canvas) {
       this.vx = (Math.random() - 0.5) * 0.4;
       this.vy = (Math.random() - 0.5) * 0.4;
       this.radius = Math.random() * 2 + 1;
-      this.color = Math.random() > 0.3 ? 'rgba(0, 229, 255, 0.4)' : 'rgba(201, 168, 76, 0.4)'; // Cyan or Gold
+      this.color = Math.random() > 0.3 ? 'rgba(0, 119, 255, 0.35)' : 'rgba(201, 168, 76, 0.4)'; // Blue or Gold
     }
 
     update() {
@@ -151,7 +151,7 @@ if (canvas) {
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(13, 74, 69, ${alpha})`;
+          ctx.strokeStyle = `rgba(0, 119, 255, ${alpha})`;
           ctx.lineWidth = 0.8;
           ctx.stroke();
         }
