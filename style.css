@@ -1,19 +1,20 @@
 /* DESIGN SYSTEM CORE & TOKENS */
 :root {
-  /* Colors - Premium Light Blue Theme */
-  --color-primary-dark: #0F2C59;   /* Deep navy for headings & emphasis */
-  --color-secondary-teal: #1565C0; /* Rich celestial blue */
-  --color-secondary-glow: #1976D2; /* Lighter interactive blue */
-  --color-gold: #C9A84C;           /* Warm accent gold (kept for branding) */
-  --color-cyan: #0077FF;           /* Electric blue accent */
-  --color-text-light: #1E293B;     /* Dark slate for primary text */
-  --color-text-muted: #64748B;     /* Slate-grey for secondary text */
-  --color-bg-dark: #EEF4FC;        /* Soft ice-blue background */
+  /* Colors - Premium Industrial & Logistics Blue Theme (ILS EXPO) */
+  --color-primary-dark: #0A1E3B;   /* Deep corporate industrial navy */
+  --color-secondary-teal: #16498C; /* Brand Royal Blue from logo */
+  --color-secondary-glow: #1E5AA8; /* Interactive royal blue glow */
+  --color-gold: #0084C8;           /* Primary brand azure (replaces legacy gold) */
+  --color-cyan: #0F75BC;           /* Logo vibrant cyan-blue accent */
+  --color-cyan-glow: #38BDF8;      /* Electric sky cyan glow */
+  --color-text-light: #0F172A;     /* Dark slate for primary text */
+  --color-text-muted: #475569;     /* Slate-grey for secondary text */
+  --color-bg-dark: #F0F5FC;        /* Soft modern ice-blue slate background */
   
   /* Glassmorphism constants - Light theme */
-  --card-glass-bg: rgba(255, 255, 255, 0.72);
-  --card-glass-border: rgba(0, 119, 255, 0.12);
-  --card-glass-shadow: rgba(0, 40, 100, 0.07);
+  --card-glass-bg: rgba(255, 255, 255, 0.82);
+  --card-glass-border: rgba(0, 132, 200, 0.16);
+  --card-glass-shadow: rgba(10, 30, 59, 0.08);
   
   /* Fonts */
   --font-arabic: 'Tajawal', sans-serif;
@@ -169,14 +170,14 @@ p {
 .title-underline {
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, var(--color-gold) 0%, transparent 100%);
+  background: linear-gradient(90deg, var(--color-cyan) 0%, var(--color-secondary-teal) 100%);
   margin-bottom: 40px;
   border-radius: 2px;
 }
 
 .title-underline.center {
   margin-inline: auto;
-  background: linear-gradient(90deg, transparent 0%, var(--color-gold) 50%, transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, var(--color-cyan) 50%, transparent 100%);
 }
 
 /* Premium Buttons */
@@ -197,39 +198,44 @@ p {
   gap: 10px;
 }
 
-.btn-gold {
-  background: linear-gradient(135deg, var(--color-gold) 0%, #a48434 100%);
-  color: #120e03;
-  box-shadow: 0 4px 15px rgba(201, 168, 76, 0.2);
+.btn-gold,
+.btn-primary {
+  background: linear-gradient(135deg, #0084C8 0%, #16498C 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 18px rgba(0, 132, 200, 0.32);
 }
 
-.btn-gold:hover {
+.btn-gold:hover,
+.btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(201, 168, 76, 0.4);
+  box-shadow: 0 8px 25px rgba(0, 132, 200, 0.45);
+  background: linear-gradient(135deg, #0294df 0%, #1b56a4 100%);
+  color: #ffffff;
 }
 
 .btn-cyan {
-  background: linear-gradient(135deg, var(--color-cyan) 0%, #00acc1 100%);
-  color: #031c20;
-  box-shadow: 0 4px 15px rgba(0, 229, 255, 0.2);
+  background: linear-gradient(135deg, #0F75BC 0%, #0084C8 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 18px rgba(15, 117, 188, 0.28);
 }
 
 .btn-cyan:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 229, 255, 0.4);
+  box-shadow: 0 8px 25px rgba(15, 117, 188, 0.45);
+  color: #ffffff;
 }
 
 .btn-outline {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.65);
   color: var(--color-primary-dark);
-  border: 1px solid rgba(0, 119, 255, 0.25);
+  border: 1.5px solid rgba(0, 132, 200, 0.35);
   backdrop-filter: blur(8px);
 }
 
 .btn-outline:hover {
   border-color: var(--color-cyan);
-  color: var(--color-cyan);
-  background: rgba(0, 119, 255, 0.06);
+  color: var(--color-secondary-teal);
+  background: rgba(0, 132, 200, 0.08);
   transform: translateY(-2px);
 }
 
@@ -273,14 +279,14 @@ p {
 
 /* Glow Borders for Premium Cards */
 .glow-card-teal:hover {
-  border-color: rgba(0, 119, 255, 0.3);
-  box-shadow: 0 10px 40px rgba(0, 119, 255, 0.12);
+  border-color: rgba(0, 132, 200, 0.4);
+  box-shadow: 0 10px 40px rgba(0, 132, 200, 0.16);
   transform: translateY(-5px);
 }
 
 .glow-card-gold:hover {
-  border-color: rgba(201, 168, 76, 0.4);
-  box-shadow: 0 10px 40px rgba(201, 168, 76, 0.12);
+  border-color: rgba(22, 73, 140, 0.4);
+  box-shadow: 0 10px 40px rgba(22, 73, 140, 0.18);
   transform: translateY(-5px);
 }
 
@@ -323,17 +329,17 @@ p {
 
 .loader-bar {
   width: 200px;
-  height: 2px;
-  background: rgba(0, 119, 255, 0.15);
+  height: 3px;
+  background: rgba(0, 132, 200, 0.15);
   margin: 0 auto;
   overflow: hidden;
-  border-radius: 1px;
+  border-radius: 2px;
 }
 
 .loader-bar-fill {
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, var(--color-cyan), var(--color-gold));
+  background: linear-gradient(90deg, var(--color-secondary-teal), var(--color-gold));
   animation: load 2.5s cubic-bezier(0.1, 0.8, 0.1, 1) forwards;
 }
 
@@ -381,36 +387,37 @@ p {
 }
 
 .header-logo-img {
-  height: 48px;
+  height: 52px;
   width: auto;
-  max-width: 220px;
+  max-width: 240px;
   object-fit: contain;
-  /* Logo has white bg so we use a subtle rounded backdrop */
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 8px;
-  padding: 4px 10px;
+  background: transparent;
+  padding: 2px 4px;
   transition: var(--transition-smooth);
-  filter: drop-shadow(0 2px 8px rgba(0, 40, 100, 0.15));
+  filter: drop-shadow(0 2px 6px rgba(10, 30, 59, 0.1));
 }
 
 .header-logo-img:hover {
-  background: rgba(255, 255, 255, 1);
-  filter: drop-shadow(0 4px 16px rgba(0, 40, 100, 0.25));
-  transform: scale(1.02);
+  filter: drop-shadow(0 4px 14px rgba(0, 132, 200, 0.25));
+  transform: scale(1.03);
 }
 
 .logo-accent {
-  color: var(--color-gold);
+  color: var(--color-cyan);
 }
 
-/* IIES EXPO 2026 Brand Logo Colors (used in hero title) */
+/* ILS EXPO Brand Logo Colors (used in hero title) */
+.logo-ils,
 .logo-iies {
-  color: #2952A3;
+  color: #0A1E3B;
   font-weight: 900;
+  letter-spacing: -0.5px;
 }
 
 .logo-expo {
-  color: #E05A1E;
+  background: linear-gradient(135deg, #0084C8 0%, #16498C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 900;
 }
 
@@ -613,13 +620,13 @@ body.lang-ar .nav-link::after {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(201, 168, 76, 0.1);
-  border: 1px solid rgba(201, 168, 76, 0.3);
+  background: rgba(0, 132, 200, 0.08);
+  border: 1px solid rgba(0, 132, 200, 0.25);
   padding: 6px 16px;
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 700;
-  color: var(--color-gold);
+  color: var(--color-cyan);
   margin-bottom: 24px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -629,8 +636,8 @@ body.lang-ar .nav-link::after {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: var(--color-gold);
-  box-shadow: 0 0 8px var(--color-gold);
+  background-color: var(--color-cyan);
+  box-shadow: 0 0 8px var(--color-cyan);
   animation: pulse 2s infinite;
 }
 
@@ -653,19 +660,22 @@ body.lang-ar .hero-title {
   letter-spacing: 0;
 }
 
-/* IIES / EXPO brand colors in hero title */
+/* ILS / EXPO brand colors in hero title */
+.hero-title .logo-ils,
 .hero-title .logo-iies {
-  color: #5a90e0;
+  color: #0A1E3B;
   font-weight: 900;
 }
 
 .hero-title .logo-expo {
-  color: #E07A3E;
+  background: linear-gradient(135deg, #0084C8 0%, #16498C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 900;
 }
 
 .hero-title .logo-year {
-  color: rgba(15, 44, 89, 0.5);
+  color: rgba(10, 30, 59, 0.5);
   font-size: 0.6em;
   font-weight: 500;
   letter-spacing: 3px;
@@ -757,7 +767,7 @@ body.lang-en .hero-title-sub {
   transform: translateX(-50%);
   width: 4px;
   height: 8px;
-  background-color: var(--color-gold);
+  background-color: var(--color-cyan);
   border-radius: 2px;
   animation: scroll-wheel 1.5s infinite;
 }
@@ -864,21 +874,21 @@ body.lang-en .hero-title-sub {
 }
 
 .progress-val {
-  color: var(--color-gold);
+  color: var(--color-cyan);
   font-weight: 700;
 }
 
 .progress-bar-track {
   width: 100%;
   height: 6px;
-  background: rgba(0, 119, 255, 0.1);
+  background: rgba(0, 132, 200, 0.12);
   border-radius: 3px;
   overflow: hidden;
 }
 
 .progress-bar-fill-stats {
   height: 100%;
-  background: linear-gradient(90deg, var(--color-cyan), var(--color-gold));
+  background: linear-gradient(90deg, var(--color-cyan), var(--color-secondary-teal));
   border-radius: 3px;
 }
 
@@ -919,13 +929,13 @@ body.lang-en .hero-title-sub {
 }
 
 .glass-card.glow-card-gold .card-glow-border {
-  box-shadow: inset 0 0 20px rgba(201, 168, 76, 0.08);
-  border-color: rgba(201, 168, 76, 0.18);
+  box-shadow: inset 0 0 20px rgba(22, 73, 140, 0.08);
+  border-color: rgba(22, 73, 140, 0.2);
 }
 
 .glass-card.glow-card-gold:hover .card-glow-border {
-  box-shadow: inset 0 0 30px rgba(201, 168, 76, 0.18);
-  border-color: rgba(201, 168, 76, 0.45);
+  box-shadow: inset 0 0 30px rgba(22, 73, 140, 0.2);
+  border-color: rgba(22, 73, 140, 0.45);
 }
 
 .icon-circle {
@@ -941,13 +951,13 @@ body.lang-en .hero-title-sub {
 }
 
 .border-gold {
-  border-color: var(--color-gold);
-  box-shadow: 0 0 15px rgba(201, 168, 76, 0.15);
+  border-color: var(--color-secondary-teal);
+  box-shadow: 0 0 15px rgba(22, 73, 140, 0.2);
 }
 
 .border-cyan {
   border-color: var(--color-cyan);
-  box-shadow: 0 0 15px rgba(0, 119, 255, 0.18);
+  box-shadow: 0 0 15px rgba(0, 132, 200, 0.22);
 }
 
 .card-title {
@@ -1166,9 +1176,9 @@ body.lang-en .sector-num {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: rgba(201, 168, 76, 0.1);
-  border: 1.5px solid var(--color-gold);
-  color: var(--color-gold);
+  background: rgba(0, 132, 200, 0.1);
+  border: 1.5px solid var(--color-cyan);
+  color: var(--color-cyan);
   font-size: 0.75rem;
   display: flex;
   align-items: center;
@@ -1261,9 +1271,9 @@ body.lang-en .audience-item:hover {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: rgba(201, 168, 76, 0.15);
-  border: 1px solid var(--color-gold);
-  color: var(--color-gold);
+  background: rgba(0, 132, 200, 0.12);
+  border: 1px solid var(--color-cyan);
+  color: var(--color-cyan);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1377,8 +1387,8 @@ body.lang-en .audience-item:hover {
 
 /* 11. FOOTER STYLES */
 .main-footer {
-  background: #D6E8FA;
-  border-top: 1px solid rgba(0, 119, 255, 0.12);
+  background: linear-gradient(180deg, #E2EEFA 0%, #D8EAF8 100%);
+  border-top: 1px solid rgba(0, 132, 200, 0.16);
   padding: 80px 0 30px;
   position: relative;
   z-index: 2;
@@ -1401,16 +1411,15 @@ body.lang-en .audience-item:hover {
 .footer-logo-img {
   height: 56px;
   width: auto;
-  max-width: 200px;
+  max-width: 240px;
   object-fit: contain;
-  background: rgba(255, 255, 255, 0.92);
-  border-radius: 8px;
-  padding: 5px 12px;
+  background: transparent;
+  padding: 2px 4px;
   transition: var(--transition-smooth);
 }
 
 .footer-logo-img:hover {
-  background: rgba(255, 255, 255, 1);
+  transform: scale(1.03);
 }
 
 .footer-desc {
@@ -1432,8 +1441,8 @@ body.lang-en .audience-item:hover {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid var(--color-gold);
-  color: var(--color-gold);
+  border: 1.5px solid var(--color-cyan);
+  color: var(--color-cyan);
   font-family: var(--font-display);
   display: flex;
   align-items: center;

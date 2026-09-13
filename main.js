@@ -30,29 +30,33 @@ const langToggle = document.getElementById('lang-toggle');
 const htmlEl = document.documentElement;
 const bodyEl = document.body;
 
+function getSavedLanguage() {
+  return localStorage.getItem('ils-lang') || localStorage.getItem('iies-lang') || 'ar';
+}
+
 function setLanguage(lang) {
   if (lang === 'en') {
     htmlEl.setAttribute('lang', 'en');
     htmlEl.setAttribute('dir', 'ltr');
     htmlEl.className = 'en-mode';
     bodyEl.className = 'lang-en';
-    localStorage.setItem('iies-lang', 'en');
+    localStorage.setItem('ils-lang', 'en');
   } else {
     htmlEl.setAttribute('lang', 'ar');
     htmlEl.setAttribute('dir', 'rtl');
     htmlEl.className = 'ar-mode';
     bodyEl.className = 'lang-ar';
-    localStorage.setItem('iies-lang', 'ar');
+    localStorage.setItem('ils-lang', 'ar');
   }
 }
 
 // Check saved language or default to Arabic
-const savedLang = localStorage.getItem('iies-lang') || 'ar';
+const savedLang = getSavedLanguage();
 setLanguage(savedLang);
 
 if (langToggle) {
   langToggle.addEventListener('click', () => {
-    const currentLang = localStorage.getItem('iies-lang') || 'ar';
+    const currentLang = getSavedLanguage();
     setLanguage(currentLang === 'ar' ? 'en' : 'ar');
     // Resize canvas to adjust layout shifts
     resizeCanvas();
@@ -92,7 +96,7 @@ if (canvas) {
       this.vx = (Math.random() - 0.5) * 0.4;
       this.vy = (Math.random() - 0.5) * 0.4;
       this.radius = Math.random() * 2 + 1;
-      this.color = Math.random() > 0.3 ? 'rgba(0, 119, 255, 0.35)' : 'rgba(201, 168, 76, 0.4)'; // Blue or Gold
+      this.color = Math.random() > 0.4 ? 'rgba(0, 132, 200, 0.4)' : (Math.random() > 0.5 ? 'rgba(22, 73, 140, 0.45)' : 'rgba(56, 189, 248, 0.5)'); // Brand Azure, Royal Blue, Sky Glow
     }
 
     update() {
@@ -151,7 +155,7 @@ if (canvas) {
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(0, 119, 255, ${alpha})`;
+          ctx.strokeStyle = `rgba(0, 132, 200, ${alpha})`;
           ctx.lineWidth = 0.8;
           ctx.stroke();
         }
@@ -362,7 +366,7 @@ if (sectorsContainer && prevBtn && nextBtn) {
   
   nextBtn.addEventListener('click', () => {
     // Scroll direction based on language direction
-    const isRtl = localStorage.getItem('iies-lang') === 'ar';
+    const isRtl = getSavedLanguage() === 'ar';
     const direction = isRtl ? -1 : 1;
     sectorsContainer.scrollBy({
       left: scrollAmount * direction,
@@ -371,7 +375,7 @@ if (sectorsContainer && prevBtn && nextBtn) {
   });
 
   prevBtn.addEventListener('click', () => {
-    const isRtl = localStorage.getItem('iies-lang') === 'ar';
+    const isRtl = getSavedLanguage() === 'ar';
     const direction = isRtl ? 1 : -1;
     sectorsContainer.scrollBy({
       left: scrollAmount * direction,
