@@ -412,9 +412,9 @@ p {
 }
 
 .header-logo-img {
-  height: 52px;
+  height: 72px;
   width: auto;
-  max-width: 240px;
+  max-width: 300px;
   object-fit: contain;
   background: transparent;
   padding: 2px 4px;
@@ -2600,8 +2600,8 @@ html, body {
     padding: 0 18px;
   }
   .header-logo-img {
-    height: 38px;
-    max-width: 150px;
+    height: 54px;
+    max-width: 200px;
   }
   .main-header {
     padding: 12px 0;
@@ -3184,8 +3184,8 @@ html, body {
     padding: 0 14px;
   }
   .header-logo-img {
-    height: 34px;
-    max-width: 120px;
+    height: 46px;
+    max-width: 160px;
   }
   .header-actions {
     gap: 8px;
