@@ -96,7 +96,7 @@ if (canvas) {
       this.vx = (Math.random() - 0.5) * 0.4;
       this.vy = (Math.random() - 0.5) * 0.4;
       this.radius = Math.random() * 2 + 1;
-      this.color = Math.random() > 0.4 ? 'rgba(0, 132, 200, 0.4)' : (Math.random() > 0.5 ? 'rgba(22, 73, 140, 0.45)' : 'rgba(56, 189, 248, 0.5)'); // Brand Azure, Royal Blue, Sky Glow
+      this.color = Math.random() > 0.4 ? 'rgba(78, 163, 173, 0.25)' : (Math.random() > 0.5 ? 'rgba(54, 110, 118, 0.2)' : 'rgba(100, 181, 191, 0.3)'); // Reference Seafoam Teal & Petrol Tones
     }
 
     update() {
@@ -151,11 +151,11 @@ if (canvas) {
         const dist = Math.sqrt(dx * dx + dy * dy);
 
         if (dist < maxDist) {
-          const alpha = (maxDist - dist) / maxDist * 0.15;
+          const alpha = (maxDist - dist) / maxDist * 0.12;
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(0, 132, 200, ${alpha})`;
+          ctx.strokeStyle = `rgba(78, 163, 173, ${alpha})`;
           ctx.lineWidth = 0.8;
           ctx.stroke();
         }
@@ -383,3 +383,70 @@ if (sectorsContainer && prevBtn && nextBtn) {
     });
   });
 }
+
+
+// 10. LIVE COUNTDOWN TIMER TO 23 NOVEMBER 2026
+function initCountdown() {
+  const targetDate = new Date('2026-11-23T09:00:00+03:00').getTime();
+  const daysEl = document.getElementById('count-days');
+  const hoursEl = document.getElementById('count-hours');
+  const minsEl = document.getElementById('count-mins');
+  const secsEl = document.getElementById('count-secs');
+
+  if (!daysEl || !hoursEl || !minsEl || !secsEl) return;
+
+  function updateTimer() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    if (distance < 0) {
+      daysEl.textContent = '00';
+      hoursEl.textContent = '00';
+      minsEl.textContent = '00';
+      secsEl.textContent = '00';
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    daysEl.textContent = days.toString().padStart(2, '0');
+    hoursEl.textContent = hours.toString().padStart(2, '0');
+    minsEl.textContent = minutes.toString().padStart(2, '0');
+    secsEl.textContent = seconds.toString().padStart(2, '0');
+  }
+
+  updateTimer();
+  setInterval(updateTimer, 1000);
+}
+
+initCountdown();
+
+
+// 11. JOURNEY TABS SWITCHER
+const journeyTabBtns = document.querySelectorAll('.journey-tab-btn');
+const journeyViews = document.querySelectorAll('.journey-view');
+
+journeyTabBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const targetViewId = btn.getAttribute('data-target');
+    
+    // Update active button state
+    journeyTabBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    // Update active view
+    journeyViews.forEach(view => {
+      if (view.id === targetViewId) {
+        view.classList.add('active');
+        // Trigger scroll animations inside view
+        const animElements = view.querySelectorAll('.scroll-anim');
+        animElements.forEach(el => el.classList.add('active'));
+      } else {
+        view.classList.remove('active');
+      }
+    });
+  });
+});
